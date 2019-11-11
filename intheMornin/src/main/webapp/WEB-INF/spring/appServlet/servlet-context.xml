@@ -16,7 +16,7 @@
 	<resources mapping="/resources/**" location="/resources/" />
 	<resources location="/WEB-INF/resources/"
 		mapping="/**" />
-	<resources location="/WEB-INF/resources/imag/"
+	<resources location="/WEB-INF/resources/images/"
 		mapping="/img/**" />
 	<resources location="/WEB-INF/resources/js/"
 		mapping="/js/**" />
