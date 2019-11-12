@@ -13,18 +13,9 @@
 	<meta name="author" content="">
 
 	<title>OOTD</title>
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <!--폰트어섬추가 -->
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--폰트어섬추가 -->
-
+	  	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div>
@@ -58,27 +49,26 @@
             </div>
         </nav>
 	</div>
-	<div class="container" style="padding-top: 100px">
-        
+	<div class="container" style="padding-top: 100px; margin-left: 40%;">
+        <div class="card align-middle" style="width:20rem; border-radius:20px;">
+		<div class="card-title" style="margin-top:30px;">
+			<h3 class="card-title text-center" style="color:#113366;">Welcome to #OOTD</h3>
+		</div>
+		<div class="card-body">
+      <form class="form-signin" method="POST" onSubmit="logincall();return false">
+        <label for="inputEmail" class="sr-only">Your ID</label>
+        <input type="text" id="uid" class="form-control" placeholder="Your ID" required autofocus><BR>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="upw" class="form-control" placeholder="Password" required><br>
+        <a href="join.jsp" class="btn btn-lg btn-primary btn-block">회원가입</a><br>
+        <button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit">로 그 인</button>
+      </form>
+      </div>
+		</div>
+	</div>
 
-        <div class="col-md-4 col-md-offset-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    로그인
-                </div>
-                <div class="panel-body">
-                    <input type="text" class="form-control" placeholder="ID">
-                    <br />
-                    <input type="text" class="form-control" placeholder="비밀번호">
-                    <br />
-                    <button class="btn btn-lg btn-success btn-block">로그인</button>
-                    <br />
-                    <!-- 폰트 어썸 아이콘 -->
-                    <a href="#" class="btn btn-lg btn-primary btn-block">
-                        <i class="fa fa-facebook" aria-hidden="true"></i> 페이스북 로그인
-                    </a>
-                </div>
-            </div>
-        </div>
+	<div class="modal">
+            </div>	
+       
 </body>
 </html>
