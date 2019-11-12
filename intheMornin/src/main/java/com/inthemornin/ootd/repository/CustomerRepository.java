@@ -10,7 +10,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.inthemornin.ootd.model.ClothesVO;
 import com.inthemornin.ootd.model.CustomerVO;
 
 @Repository

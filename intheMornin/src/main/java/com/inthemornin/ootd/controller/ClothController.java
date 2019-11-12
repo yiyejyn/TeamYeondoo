@@ -14,7 +14,7 @@ public class ClothController {
 	@Autowired
 	IClothService clothService;
 	
-	@RequestMapping(value="/hr/clothcount") // URL주소 뒤에 해당 사이트에 요청을 보내라
+	@RequestMapping(value="/ootd/clothcount") // URL주소 뒤에 해당 사이트에 요청을 보내라
 	public String clothCount(
 		@RequestParam(value="deptid", required=false, defaultValue="0") 
 		int deptid, Model model) {
@@ -23,7 +23,7 @@ public class ClothController {
 		}else {
 			model.addAttribute("clothcount", clothService.getCount(deptid));
 		}
-		return "hr/clothcount";
+		return "ootd/clothcount";
 	}
 	
 
