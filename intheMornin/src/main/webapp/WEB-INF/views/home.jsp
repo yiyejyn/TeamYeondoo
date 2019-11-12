@@ -43,7 +43,7 @@
                             <a href="mycloset.jsp">MY CLOSET</a>
                         </li>
                         <li>
-                            <a href="<c:url value='/login.jsp'/>"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
+                            <a href="<c:url value='login.jsp'/>"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
                         </li>
                     </ul>
                 </div>
