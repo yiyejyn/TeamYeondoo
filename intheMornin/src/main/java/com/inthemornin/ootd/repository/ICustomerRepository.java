@@ -6,8 +6,10 @@ import java.util.Map;
 import com.inthemornin.ootd.model.CustomerVO;
 
 
-public interface IRepository {
+public interface ICustomerRepository {
 	int getCount();
 	int getCount(int deptid);
 	public void insertCust(CustomerVO cust);
+	List<CustomerVO> getCustList();
+	CustomerVO getCustInfo(int empid);
 }
