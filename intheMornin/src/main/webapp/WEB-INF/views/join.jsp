@@ -642,7 +642,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputPhoneNumber" class="col-lg-2 control-label">SMS 수신여부</label>
+                <label for="inputPhoneNumber" class="col-lg-2 control-label">SMS수신여부</label>
                 <div class="col-lg-10">
                     <label class="radio-inline">
                         <input type="radio" id="smsReceiveYn" name="smsReceiveYn" value="Y" checked> 동의합니다.
