@@ -12,12 +12,20 @@
 
   <title>OOTD</title>
   
-  	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
+	<script type="text/javascript">
+		$(document).ready(function(e){
+			$('#login').click(function() {
+				location.href="login";
+			})
+		})
+	</script>
+	
 
 </head>
+
 <body>
 	<div>
 		<nav class="navbar navbar-inverse">
@@ -43,7 +51,7 @@
                             <a href="mycloset.jsp">MY CLOSET</a>
                         </li>
                         <li>
-                            <a href="<c:url value='login.jsp'/>"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
+                            <button id='login'><span class="glyphicon glyphicon-log-in"></span> LOG-IN</button>
                         </li>
                     </ul>
                 </div>

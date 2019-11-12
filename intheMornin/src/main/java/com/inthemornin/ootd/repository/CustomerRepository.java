@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -61,6 +63,21 @@ public class CustomerRepository implements IRepository{
 				cust.getCust_rank(),
 				cust.getCust_point()
 		);
+	}
+	
+	public void login(CustomerVO vo, HttpSession session) {
+		System.out.println("===> 로그인 기능 처리");
+		session.setAttribute("cust_id", vo);
+	}
+
+	public boolean loginCheck(CustomerVO vo, HttpSession session) {
+		System.out.println("===> 로그인 여부 확인");
+		return (session.getAttribute("cust_id") == null)? false:true;
+	}
+
+	public void logout(HttpSession session) {
+		System.out.println("===> 로그아웃 기능 처리");
+		session.invalidate();
 	}
 	
 	

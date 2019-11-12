@@ -14,7 +14,7 @@ public class Main {
 		IService clothService = 
 				context.getBean("clothService", IService.class);
 			
-			System.out.println("-- 사원의 수 조회");
+			System.out.println("로그");
 			System.out.println(clothService.getCount());
 			System.out.println(clothService.getCount(10));
 			
