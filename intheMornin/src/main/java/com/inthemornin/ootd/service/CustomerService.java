@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.inthemornin.ootd.model.CustomerVO;
-import com.inthemornin.ootd.repository.IRepository;
+import com.inthemornin.ootd.repository.ICustomerRepository;
 
 @Service
-public class CustomerService implements IService{
+public class CustomerService implements ICustomerService{
 	
 	@Autowired
-	IRepository customerRepository;
+	ICustomerRepository customerRepository;
 	
 	@Override
 	public int getCount() {
@@ -30,8 +30,13 @@ public class CustomerService implements IService{
 	}
 
 	@Override
+	public void login(CustomerVO vo, HttpSession session) {
+		customerRepository.login(vo, session);
+	}
+	
+	@Override
 	public boolean loginCheck(CustomerVO vo, HttpSession session) {
-		boolean result = customerRepository.loginCheck(vo);
+		boolean result = customerRepository.loginCheck(vo, session);
 		if (result == true) {
 			session.setAttribute("cust_id", vo.getCust_id());
 		}

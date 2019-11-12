@@ -16,7 +16,7 @@ import com.inthemornin.ootd.model.ClothesVO;
 import com.inthemornin.ootd.model.CustomerVO;
 
 @Repository
-public class CustomerRepository implements IRepository{
+public class CustomerRepository implements ICustomerRepository{
 
 	@Autowired
 	JdbcTemplate jdbcTemplate;
@@ -80,7 +80,35 @@ public class CustomerRepository implements IRepository{
 		session.invalidate();
 	}
 	
+	@Override
+	public List<CustomerVO> getCustList() {
+		String sql = "select * from customers";
+		return jdbcTemplate.query(sql, new RowMapper<CustomerVO>() {
+			@Override
+			public CustomerVO mapRow(ResultSet rs, int count) 
+					throws SQLException {
+				CustomerVO customer = new CustomerVO();
+				customer.setCust_id(rs.getString("cust_id"));
+				customer.setCust_password(rs.getString("cust_password"));
+				customer.setCust_name(rs.getString("cust_name"));
+				customer.setCust_address(rs.getString("cust_address"));
+				customer.setCust_gender(rs.getString("cust_gender"));
+				customer.setCust_rank(rs.getString("cust_rank"));
+				customer.setCust_point(rs.getInt("cust_point"));			
+				
+				return customer;
+			}			
+		});
+	}
 	
+	@Override
+	public CustomerVO getCustInfo(int custid) {
+		String sql = "select cust_id, cust_password, cust_name, "
+				+ "cust_address, cust_gender, cust_rank, cust_point "
+				+ "from customers where cust_id=?";
+		return jdbcTemplate.queryForObject(sql,  new CustomerMapper(), custid);
+	}
+
 }
 
 

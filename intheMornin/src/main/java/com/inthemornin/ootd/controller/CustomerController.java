@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.inthemornin.ootd.model.CustomerVO;
-import com.inthemornin.ootd.service.IService;
+import com.inthemornin.ootd.service.ICustomerService;
 
 @Controller
 public class CustomerController {
 	
 	@Autowired
-	IService customerService;
+	ICustomerService customerService;
 	
 	@RequestMapping(value="/hr/custcount") // URL주소 뒤에 해당 사이트에 요청을 보내라
 	public String customerCount(
@@ -33,12 +33,15 @@ public class CustomerController {
 	}
 	
 	@RequestMapping("/login")
-	public String login() {
-		return "login";
+	public ModelAndView login(@ModelAttribute CustomerVO vo, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		mav.setViewName("login");
+		return mav;
 	}
 	
 	//로그인 처리
-	@RequestMapping(value="/loginCheck")
+	@RequestMapping("/loginCheck")
 	public ModelAndView loginCheck(@ModelAttribute CustomerVO vo, HttpSession session) {
 		
 		boolean result = customerService.loginCheck(vo, session);
@@ -61,7 +64,7 @@ public class CustomerController {
 		
 		customerService.logout(session);
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("login");
+		mav.setViewName("logout");
 		mav.addObject("msg", "logout");
 		
 		return mav;

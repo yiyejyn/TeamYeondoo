@@ -3,7 +3,7 @@ package com.inthemornin.ootd;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-import com.inthemornin.ootd.service.IService;
+import com.inthemornin.ootd.service.ICustomerService;
 
 public class Main {
 
@@ -11,12 +11,12 @@ public class Main {
 		
 		AbstractApplicationContext context =
 				new GenericXmlApplicationContext("spring/application-config.xml");
-		IService clothService = 
-				context.getBean("clothService", IService.class);
+		ICustomerService customerService = 
+				context.getBean("customerService", ICustomerService.class);
 			
-			System.out.println("로그");
-			System.out.println(clothService.getCount());
-			System.out.println(clothService.getCount(10));
+			System.out.println("제발 뭐라도 되면 좋겠다...");
+			System.out.println(customerService.getCount());
+			System.out.println(customerService.getCount(10));
 			
 		context.close();
 	}

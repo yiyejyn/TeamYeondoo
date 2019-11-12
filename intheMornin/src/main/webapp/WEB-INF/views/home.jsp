@@ -50,9 +50,11 @@
                         <li>
                             <a href="mycloset.jsp">MY CLOSET</a>
                         </li>
-                        <li>
-                            <button id='login'><span class="glyphicon glyphicon-log-in"></span> LOG-IN</button>
-                        </li>
+                        <li>=
+                        	<a href="<c:url value='login'/>">login</a>
+                        	
+<!--                             <button id='login'><span class="glyphicon glyphicon-log-in"></span> LOG-IN</button>
+ -->                        </li>
                     </ul>
                 </div>
             </div>

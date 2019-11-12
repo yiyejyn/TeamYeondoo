@@ -6,13 +6,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.inthemornin.ootd.service.IService;
+import com.inthemornin.ootd.service.IClothService;
 
 @Controller
 public class ClothController {
 	
 	@Autowired
-	IService clothService;
+	IClothService clothService;
 	
 	@RequestMapping(value="/hr/clothcount") // URL주소 뒤에 해당 사이트에 요청을 보내라
 	public String clothCount(

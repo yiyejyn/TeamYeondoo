@@ -55,7 +55,8 @@
 			<h3 class="card-title text-center" style="color:#113366;">Welcome to #OOTD</h3>
 		</div>
 		<div class="card-body">
-      <form class="form-signin" method="POST" onSubmit="logincall();return false">
+		
+      <form class="form-signin" method="POST" action="/login">
         <label for="inputEmail" class="sr-only">Your ID</label>
         <input type="text" id="uid" class="form-control" placeholder="Your ID" required autofocus><BR>
         <label for="inputPassword" class="sr-only">Password</label>
