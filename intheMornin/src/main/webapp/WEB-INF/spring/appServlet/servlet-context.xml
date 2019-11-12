@@ -16,7 +16,7 @@
 	<resources mapping="/resources/**" location="/resources/" />
 	<resources location="/WEB-INF/resources/"
 		mapping="/**" />
-	<resources location="/WEB-INF/resources/images/"
+	<resources location="/WEB-INF/resources/img/"
 		mapping="/img/**" />
 	<resources location="/WEB-INF/resources/js/"
 		mapping="/js/**" />
@@ -29,7 +29,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	<view-controller path="/" view-name="home" />
-	<context:component-scan base-package="com.inthemornin.ootd" /> <!-- .controller를 해주는 것이 좋다. -->
+	<context:component-scan base-package="com.inthemornin.ootd" />
 	
 	
 	
