@@ -7,7 +7,7 @@ import com.inthemornin.ootd.model.CustomerVO;
 import com.inthemornin.ootd.repository.IClothRepository;
 
 @Service
-public class ClothService implements ICustomerService {
+public class ClothService implements IClothService {
 
 	@Autowired
 	IClothRepository clothRepository;
@@ -22,8 +22,4 @@ public class ClothService implements ICustomerService {
 		return clothRepository.getCount(deptid);
 	}
 	
-	@Override
-	public void insertCust(CustomerVO cust) {
-		/// NO USING THIS METHOD IN THIS CLASS
-	}
 }
