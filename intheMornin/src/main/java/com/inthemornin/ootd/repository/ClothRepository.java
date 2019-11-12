@@ -12,7 +12,7 @@ import com.inthemornin.ootd.model.ClothesVO;
 import com.inthemornin.ootd.model.CustomerVO;
 
 @Repository
-public class ClothRepository implements IRepository{
+public class ClothRepository implements IClothRepository{
 	
 	@Autowired
 	JdbcTemplate jdbcTemplate;
@@ -44,9 +44,5 @@ public class ClothRepository implements IRepository{
 		return jdbcTemplate.queryForObject(sql, Integer.class, deptid);
 	}
 	
-	@Override
-	public void insertCust(CustomerVO cust) {
-		/// NO USING THIS METHOD IN THIS CLASS
-	}
-	
+
 }

@@ -1,5 +1,5 @@
 package com.inthemornin.ootd.controller;
 
-public interface IController {
+public interface IClothController {
 
 }

@@ -3,7 +3,7 @@ package com.inthemornin.ootd;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-import com.inthemornin.ootd.service.IService;
+import com.inthemornin.ootd.service.ICustomerService;
 
 public class Main {
 
@@ -11,8 +11,8 @@ public class Main {
 		
 		AbstractApplicationContext context =
 				new GenericXmlApplicationContext("spring/application-config.xml");
-		IService clothService = 
-				context.getBean("clothService", IService.class);
+		ICustomerService clothService = 
+				context.getBean("clothService", ICustomerService.class);
 			
 			System.out.println("-- 사원의 수 조회");
 			System.out.println(clothService.getCount());

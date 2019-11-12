@@ -4,13 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.inthemornin.ootd.model.CustomerVO;
-import com.inthemornin.ootd.repository.IRepository;
+import com.inthemornin.ootd.repository.ICustomerRepository;
 
 @Service
-public class CustomerService implements IService{
+public class CustomerService implements ICustomerService{
 	
 	@Autowired
-	IRepository customerRepository;
+	ICustomerRepository customerRepository;
 	
 	@Override
 	public int getCount() {
