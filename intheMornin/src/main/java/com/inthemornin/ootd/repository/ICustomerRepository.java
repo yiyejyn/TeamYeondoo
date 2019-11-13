@@ -10,7 +10,7 @@ import com.inthemornin.ootd.model.CustomerVO;
 
 public interface ICustomerRepository {
 	int getCount();
-	int getCount(int deptid);
+	int getCount(String custId);
 	public void insertCust(CustomerVO cust);
 	List<CustomerVO> getCustList();
 	CustomerVO getCustInfo(int empid);

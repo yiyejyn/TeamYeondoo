@@ -103,11 +103,11 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                 </div>
                 <div class="collapse navbar-collapse" id="nav_menu">
                     <ul class="nav navbar-nav navbar-right" >
-                        <li class="active">
+                        <li>
                             <a href="home.html">TODAY</a>
                         </li>
                         <li>
-                            <a href="mycloset.html">MY CLOSET</a>
+                            <a href="mycloset.html">MY PAGE</a>
                         </li>
                         <li>
                             <a href="login.html"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
@@ -153,15 +153,16 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			    <div style="display: inline-block; margin-left: 10%;">
 			        <a href="mycloset(bottom).html" style="font-size: 20px; color: black; font-weight: 500;">BOTTOM</a>
                 </div>
-                <button type="button" class="btn btn-defualt" style="float: right;" onclick="location.href='topedit.html'">EDIT</button>
+                <button type="button" class="btn btn-defualt" style="float: right;" onclick="location.href='#'">EDIT</button>
 			</div>
 			<div>
 			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
 			        <ul style="margin-top: 10%;">
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-			                    <img src="댕댕이.jpg" width="170" height="237">				
-			                </a>
+                                <img src="댕댕이.jpg" width="170" height="237">			
+                            </a><br>
+                            <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
 			        </ul>
 			    </div>
@@ -170,7 +171,8 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
 			                    <img src="댕댕이.jpg" width="170" height="237">				
-			                </a>
+			                </a><br>
+                            <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
 			        </ul>
 			    </div>
@@ -179,7 +181,8 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
 			                    <img src="댕댕이.jpg" width="170" height="237">				
-			                </a>
+			                </a><br>
+                            <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
 			        </ul>
 			    </div>
@@ -188,7 +191,8 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 		                <li class="goods_pay_item ">
 		                    <a href="/orderStatus/2019103137492141" class="goods_thumb">
 		                        <img src="댕댕이.jpg" width="170" height="237">				
-		                    </a>
+		                    </a><br>
+                            <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 		                </li>
 		            </ul>
 			    </div>
@@ -197,7 +201,8 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
 			                    <img src="댕댕이.jpg" width="170" height="237">				
-			                </a>
+			                </a><br>
+                            <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
 			        </ul>
 			    </div>
@@ -206,11 +211,13 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
 			                    <img src="댕댕이.jpg" width="170" height="237">				
-			                </a>
+			                </a><br>
+                            <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
 			        </ul>
 			    </div>
 			</div>
+			<button style="float: right;" type="button" class="btn btn-default" onclick="location.href='upload.html'">추가</button>
 		</div>
 	</div>
 </body>

@@ -11,6 +11,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.inthemornin.ootd.model.ClothesVO;
+import com.inthemornin.ootd.model.CustomerVO;
 
 @Repository
 public class ClothRepository implements IClothRepository{
@@ -99,14 +100,16 @@ public class ClothRepository implements IClothRepository{
 	}
 	
 	@Override
-	public void insertCloth(ClothesVO cloth) {
+	public void insertCloth(ClothesVO cloth, CustomerVO cust) {
 		String sql = "insert into clothes "
 				+ "(cloth_id, outfits_type, cust_id, color, season) "
-				+ "values (cloth_seq.nextval, ?, ?, ?, ?)";
+				+ "values (cloth_seq.nextval, ?, ?, ?, ?) "
+				+ "where cust_id=?";
 		jdbcTemplate.update(sql, cloth.getCustId(),
 				cloth.getOutfitsType(),
 				cloth.getColor(),
-				cloth.getSeason());
+				cloth.getSeason(),
+				cust.getCustId());
 	}
 	
 	@Override

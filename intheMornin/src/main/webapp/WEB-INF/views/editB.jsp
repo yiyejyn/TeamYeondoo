@@ -103,11 +103,11 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                 </div>
                 <div class="collapse navbar-collapse" id="nav_menu">
                     <ul class="nav navbar-nav navbar-right" >
-                        <li class="active">
+                        <li>
                             <a href="home.html">TODAY</a>
                         </li>
                         <li>
-                            <a href="mycloset.html">MY CLOSET</a>
+                            <a href="mycloset.html">MY PAGE</a>
                         </li>
                         <li>
                             <a href="login.html"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
@@ -216,8 +216,8 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			            </li>
 			        </ul>
 			    </div>
-			</div>
-			<button style="float: right;" type="button" class="btn btn-default" onclick="location.href='upload.html'">추가</button>
+            </div>
+            <button style="float: right;" type="button" class="btn btn-default" onclick="location.href='upload.html'">추가</button>
 		</div>
 	</div>
 </body>

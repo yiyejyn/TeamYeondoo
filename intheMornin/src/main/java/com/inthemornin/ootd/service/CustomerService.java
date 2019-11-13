@@ -23,8 +23,8 @@ public class CustomerService implements ICustomerService{
 	}
 
 	@Override
-	public int getCount(int deptid) {
-		return customerRepository.getCount(deptid);
+	public int getCount(String custId) {
+		return customerRepository.getCount(custId);
 	}
 	
 	@Override

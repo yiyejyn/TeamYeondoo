@@ -52,8 +52,8 @@ public class ClothService implements IClothService {
 	}
 	
 	@Override
-	public void insertCloth(ClothesVO cloth) {
-		clothRepository.insertCloth(cloth);
+	public void insertCloth(ClothesVO cloth, CustomerVO cust) {
+		clothRepository.insertCloth(cloth, cust);
 	}
 
 	@Override

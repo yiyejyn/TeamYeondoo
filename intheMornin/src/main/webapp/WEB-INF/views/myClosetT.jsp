@@ -84,49 +84,6 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 <script type="text/javascript" language="JavaScript" src="https://ssl.pstatic.net/static.checkout/layout/201911010009/js/customer/layout.snb.js"></script>
 <script type="text/javascript" language="JavaScript" src="https://ssl.pstatic.net/static.checkout/layout/201911010009/js/customer/checkout.nclktag.js"></script>
 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
-<link rel="stylesheet" type="text/css" href="/css/result-light.css">
-<style id="compiled-css" type="text/css"></style>
-<script type="text/javascript">//<![CDATA[
-    $(window).load(function(){  
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-            
-                reader.onload = function (e) {
-                $('#blah').attr('src', e.target.result);
-            }
-            
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-    
-    $("#imgInp").change(function(){
-        readURL(this);
-    });
-
-    });
-
-  //]]>
-</script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        switch($('#selecttype option:selected').val()) {
-            case outer:
-
-            break;
-            case top:
-                
-            break;
-            case bottom:
-
-            break;
-            default:
-                //
-        }
-    });
-</script>
-
 </head>
 <body>
 	<div>
@@ -146,11 +103,11 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                 </div>
                 <div class="collapse navbar-collapse" id="nav_menu">
                     <ul class="nav navbar-nav navbar-right" >
-                        <li class="active">
+                        <li>
                             <a href="home.html">TODAY</a>
                         </li>
                         <li>
-                            <a href="mycloset.html">MY CLOSET</a>
+                            <a href="mycloset.html">MY PAGE</a>
                         </li>
                         <li>
                             <a href="login.html"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
@@ -185,45 +142,76 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
         
         <!-- content -->
 	<div id="content" class="subpg _root">
-		<form id="form1" style="display: inline-block; width: 50%;">
-			<img id="blah" src="#" alt="이미지 미리보기" width="400" height="400" />
-			<input type='file' id="imgInp" class="inp-img" accept=".jpg, .png" />
-		</form>
-		
-		<form style="display: inline-block; width: 40%;" class="form-horizontal" role="form" method="post" action="javascript:alert( '의상이 등록되었습니다.' );">
-			<div class="form-group" id="divType">
-				<label for="inputType" class="col-lg-2 control-label">타입</label>
-					<div class="col-lg-10" style="width: 140px;">
-                        <select name="type" id="selecttype" class="form-control" data-rule-required="true">
-                            <option value="outer">OUTER</option>
-                            <option value="top">TOP</option>
-                            <option value="bottom">BOTTOM</option>
-                        </select>    
-					</div>
+		<div>
+			<div class="ask_sc">
+			    <div style="display: inline-block; margin-left: 28%;">
+			        <a href="mycloset(outer).html" style="font-size: 20px; color: black; font-weight: 500;">OUTER</a>
+			    </div>
+			    <div style="display: inline-block; margin-left: 10%;">
+			            <a href="mycloset(top).html" style="font-size: 20px; color: black; font-weight: 500;">TOP</a>
+			    </div>
+			    <div style="display: inline-block; margin-left: 10%;">
+			        <a href="mycloset(bottom).html" style="font-size: 20px; color: black; font-weight: 500;">BOTTOM</a>
+                </div>
+                <button type="button" class="btn btn-defualt" style="float: right;" onclick="location.href='te.html'">EDIT</button>
 			</div>
-			<div class="form-group" id="divColor">
-				<label for="inputColor" class="col-lg-2 control-label">색상</label>
-					<div class="col-lg-10" style="width: 140px;">
-						<input type="color" value="#ff000" class="form-control" id="color" data-rule-required="true">
-					</div>
+			<div>
+			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+			        <ul style="margin-top: 10%;">
+			            <li class="goods_pay_item ">
+			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+			                    <img src="댕댕이.jpg" width="170" height="237">				
+			                </a>
+			            </li>
+			        </ul>
+			    </div>
+			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+			        <ul style="margin-top: 10%;">
+			            <li class="goods_pay_item ">
+			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+			                    <img src="댕댕이.jpg" width="170" height="237">				
+			                </a>
+			            </li>
+			        </ul>
+			    </div>
+			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+			        <ul style="margin-top: 10%;">
+			            <li class="goods_pay_item ">
+			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+			                    <img src="댕댕이.jpg" width="170" height="237">				
+			                </a>
+			            </li>
+			        </ul>
+			    </div>
+			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+		            <ul style="margin-top: 10%;">
+		                <li class="goods_pay_item ">
+		                    <a href="/orderStatus/2019103137492141" class="goods_thumb">
+		                        <img src="댕댕이.jpg" width="170" height="237">				
+		                    </a>
+		                </li>
+		            </ul>
+			    </div>
+			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+			        <ul style="margin-top: 10%;">
+			            <li class="goods_pay_item ">
+			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+			                    <img src="댕댕이.jpg" width="170" height="237">				
+			                </a>
+			            </li>
+			        </ul>
+			    </div>
+			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+			        <ul style="margin-top: 10%;">
+			            <li class="goods_pay_item ">
+			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+			                    <img src="댕댕이.jpg" width="170" height="237">				
+			                </a>
+			            </li>
+			        </ul>
+			    </div>
 			</div>
-			<div class="form-group" id="divSeason">
-				<label for="inputSeason" class="col-lg-2 control-label">계절</label>
-					<div class="col-lg-10" style="width: 140px;">
-                        <select name="season" id="season" class="form-control" data-rule-required="true">
-                            <option value="spring">봄</option>
-                            <option value="summer">여름</option>
-                            <option value="autumn">가을</option>
-                            <option value="winter">겨울</option>
-                        </select>
-					</div>
-			</div>
-			<div class="form-group">
-				<div class="col-lg-offset-2 col-lg-10">
-					<button type="submit" class="btn btn-default">등록</button>
-				</div>
-			</div>
-		</form>
+		</div>
 	</div>
 </body>
 </html>

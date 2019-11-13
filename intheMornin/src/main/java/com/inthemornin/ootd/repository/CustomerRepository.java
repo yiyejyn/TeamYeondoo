@@ -43,9 +43,9 @@ public class CustomerRepository implements ICustomerRepository{
 	}
 
 	@Override
-	public int getCount(int deptid) {
+	public int getCount(String custId) {
 		String sql = "select count(*) from customers where cust_id=?";
-		return jdbcTemplate.queryForObject(sql, Integer.class, deptid);
+		return jdbcTemplate.queryForObject(sql, Integer.class, custId);
 	}
 	
 	@Override
