@@ -55,18 +55,20 @@ public class ClothController {
 	}
 	
 	//go to Upload
-	@RequestMapping(value="/cloth", method=RequestMethod.GET)
+	@RequestMapping(value="/upload", method=RequestMethod.GET)
 	public String insertCloth(Model model) {
 		System.out.println("You have entered the Upload maprequest");
-		return "cloth";
+		return "upload";
 	}
 	
 	//Upload to DB
-	@RequestMapping(value="/cloth", method=RequestMethod.POST)
+	@RequestMapping(value="/upload", method=RequestMethod.POST)
 	public String insertCloth(ClothesVO cloth, HttpSession session, Model model) {
 		clothService.insertCloth(cloth, session);
 		System.out.println("You have inserted Upload to DB");
-		return "redirect:/mycloset";
+		return "redirect:/editO";
 	}
+	
+	
 
 }
