@@ -103,17 +103,17 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="">
                         #OOTD
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="nav_menu">
                     <ul class="nav navbar-nav navbar-right" >
                         <li>
-                            <a href="home.html">TODAY</a>
+                            <a href="#">TODAY</a>
                         </li>
                         <li>
-                            <a href="#">MY PAGE</a>
+                            <a href="<c:url value='login/myPage'/>">MY PAGE</a>
                         </li>
                         <li>
                             <a href="login.html"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
@@ -136,7 +136,9 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
             <div class="s_sc">
                 <dl class="my_npoint" style="text-align: center;">
                     <dt style="font-size: 15px;">성별</dt>
-                    <dd style="font-size: 13px; margin: 10%">성별 연동</dd>
+                    <dd style="font-size: 13px; margin: 10%">
+                    	<a href="<c:url value='login/myPage/name'/>"></a>
+                    </dd>
                 </dl>
                 <dl class="my_npoint" style="text-align: center;">
                     <dt style="font-size: 15px;">포인트</dt>
@@ -150,7 +152,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 <div id="content" class="subpg _root">
 	<div>
 		<div class="ask_sc" style="text-align: right;">
-	    	<a href="mycloset(outer).html" style="font-size: 20px; color: black; font-weight: 500;">MY CLOSET</a>
+	    	<a href="<c:url value='myPage/myClosetO'/>" style="font-size: 20px; color: black; font-weight: 500;">MY CLOSET</a>
 		</div>
 	
 		<div>

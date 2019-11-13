@@ -52,15 +52,52 @@
 			<h3 class="card-title text-center" style="color:#113366;">Welcome to #OOTD</h3>
 		</div><br>
 		<div class="card-body">
-        <form class="form-signin" method="POST" onSubmit="logincall();return false">
+		
+        <form class="form-signin" method="POST" action="./login" accept-charset="UTF-8">
             <label for="inputEmail" class="sr-only">Your ID</label>
-            <input type="text" id="uid" class="form-control" placeholder="이메일 주소" required autofocus><BR>
+            <input type="text" name="custId" id="custId" class="form-control" placeholder="이메일 주소" required autofocus><BR>
             <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="upw" class="form-control" placeholder="비밀번호" required><br>
+            <input type="password" name="custPassword" id="custPassword" class="form-control" placeholder="비밀번호" required><br>
             <button id="btn-Yes" class="btn btn-lg btn-default btn-block" type="submit">로 그 인</button>
             <hr>
             <p class="izU2O" style="text-align: center;">계정이 없으신가요? <a href="<c:url value='join'/>">가입하기</a></p>
         </form>
+        <%-- 
+			      <c:choose>
+					<c:when test="${empty sessionScope.userId}">
+					<!-- 로그인이 안되어 있으면 -->
+						<form id="loginFrm" name="loginFrm" action="./loginCheck" class="form-signin" role="form" method="POST" accept-charset="UTF-8">
+							<table>
+								<tr>
+									<td>아이디</td>
+									<td><input type="text" name="custId" id="custId" class="form-control" placeholder="Your ID" required autofocus></td>
+								</tr>
+								<tr>
+									<td>패스워드</td>
+									<td><input type="password" name="custPassword" id="custPassword" class="form-control" placeholder="Password" required></td>
+								</tr>
+								
+								<tr>
+									<td colspan=2>
+										<a href="<c:url value='join'/>"> <class="btn btn-lg btn-primary btn-block">회원가입</a><br>
+		        						<button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit">로 그 인</button>
+									</td>
+								</tr>
+								<c:if test="${msg == '실패'}">
+									<tr>
+										<td colspan=2>
+											아이디 또는 패스워드가 틀렸습니다.
+										</td>
+									</tr>
+								</c:if>
+							</table>
+						</form>
+					</c:when>
+					<c:otherwise>
+						<h3>${sessionScope.custId}님 환영합니다.</h3>
+						<a href="./logout">로그아웃</a>
+					</c:otherwise>
+				</c:choose> --%>
         </div>
 		</div>
     </div>
