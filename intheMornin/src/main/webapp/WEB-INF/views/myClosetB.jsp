@@ -153,7 +153,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			    <div style="display: inline-block; margin-left: 10%;">
 			        <a href="<c:url value='myClosetB'/>" style="font-size: 20px; color: black; font-weight: 500;">BOTTOM</a>
                 </div>
-                <button type="button" class="btn btn-defualt" style="float: right;" onclick="location.href='editB.jsp'">EDIT</button>
+                <button type="button" class="btn btn-defualt" style="float: right;" onclick="location.href='eidtB'">EDIT</button>
 			</div>
 			<div>
 			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">

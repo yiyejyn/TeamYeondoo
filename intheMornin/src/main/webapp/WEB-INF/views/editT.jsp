@@ -148,12 +148,12 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        <a href="<c:url value='editO'/>" style="font-size: 20px; color: black; font-weight: 500;">OUTER</a>
 			    </div>
 			    <div style="display: inline-block; margin-left: 10%;">
-			            <a href="./" style="font-size: 20px; color: black; font-weight: 500;">TOP</a>
+			            <a href="<c:url value='editT'/>" style="font-size: 20px; color: black; font-weight: 500;">TOP</a>
 			    </div>
 			    <div style="display: inline-block; margin-left: 10%;">
 			        <a href="<c:url value='editB'/>" style="font-size: 20px; color: black; font-weight: 500;">BOTTOM</a>
                 </div>
-                <button type="button" class="btn btn-defualt" style="float: right;" onclick="location.href='editT.jsp'">EDIT</button>
+                <button type="button" class="btn btn-defualt" style="float: right;" onclick="location.href='<c:url value='editT'/>'">EDIT</button>
 			</div>
 			<div>
 			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
@@ -217,7 +217,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        </ul>
 			    </div>
 			</div>
-			<button style="float: right;" type="button" class="btn btn-default" onclick="location.href='upload.jsp'">추가</button>
+			<button style="float: right;" type="button" class="btn btn-default" onclick="location.href='<c:url value='upload'/>'">추가</button>
 		</div>
 	</div>
 </body>

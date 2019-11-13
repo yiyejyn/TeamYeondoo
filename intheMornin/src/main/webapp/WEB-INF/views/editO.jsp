@@ -97,20 +97,20 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="./">
                         #OOTD
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="nav_menu">
                     <ul class="nav navbar-nav navbar-right" >
                         <li>
-                            <a href="home.html">TODAY</a>
+                            <a href="#">TODAY</a>
                         </li>
                         <li>
-                            <a href="mycloset.html">MY PAGE</a>
+                            <a href="<c:url value='myPage'/>">MY PAGE</a>
                         </li>
                         <li>
-                            <a href="login.html"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
+                            <a href="<c:url value='login'/>"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
                         </li>
                     </ul>
                 </div>
@@ -145,13 +145,13 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 		<div>
 			<div class="ask_sc">
 			    <div style="display: inline-block; margin-left: 28%;">
-			        <a href="mycloset(outer).html" style="font-size: 20px; color: black; font-weight: 500;">OUTER</a>
+			        <a href="<c:url value='myClosetO'/>" style="font-size: 20px; color: black; font-weight: 500;">OUTER</a>
 			    </div>
 			    <div style="display: inline-block; margin-left: 10%;">
-			            <a href="mycloset(top).html" style="font-size: 20px; color: black; font-weight: 500;">TOP</a>
+			            <a href="<c:url value='myClosetT'/>" style="font-size: 20px; color: black; font-weight: 500;">TOP</a>
 			    </div>
 			    <div style="display: inline-block; margin-left: 10%;">
-			        <a href="mycloset(bottom).html" style="font-size: 20px; color: black; font-weight: 500;">BOTTOM</a>
+			        <a href="<c:url value='myClosetB'/>" style="font-size: 20px; color: black; font-weight: 500;">BOTTOM</a>
                 </div>
                 <button type="button" class="btn btn-defualt" style="float: right;" onclick="location.href='#'">EDIT</button>
 			</div>
@@ -217,7 +217,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        </ul>
 			    </div>
 			</div>
-			<button style="float: right;" type="button" class="btn btn-default" onclick="location.href='upload.html'">추가</button>
+			<button style="float: right;" type="button" class="btn btn-default" onclick="location.href='<c:url value='upload'/>'">추가</button>
 		</div>
 	</div>
 </body>
