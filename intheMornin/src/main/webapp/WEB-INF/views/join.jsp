@@ -104,6 +104,7 @@
         }
     });
 
+
     //------- validation 검사
     $( "form" ).submit(function( event ) {
             
@@ -263,6 +264,7 @@
     </div>
 </nav>
 </div>
+
 <div class="container" style="margin-top:8%; margin-bottom: 8%; border: 1px solid lightgray; width: 70%;">
     <h3 class="card-title text-center" style="color:#113366; margin-bottom: 2%;">Welcome to #OOTD</h3>
     <!-- 좌우측의 공간 확보 -->

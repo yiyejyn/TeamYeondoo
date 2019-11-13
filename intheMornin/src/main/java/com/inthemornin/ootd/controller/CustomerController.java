@@ -23,7 +23,78 @@ public class CustomerController {
 	@Autowired
 	ICustomerService customerService;
 	
-	@RequestMapping(value="ootd/custcount") // URL주소 뒤에 해당 사이트에 요청을 보내라
+	//go to Home
+	@RequestMapping("")
+	public ModelAndView home(@ModelAttribute CustomerVO cust, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("home");
+		return mav;
+	}
+	
+	
+	//go to Login
+	@RequestMapping(value="/login", method=RequestMethod.GET)
+	public String login(Model model) {
+		System.out.println("You have entered the Login maprequest");
+		return "login";
+	}
+	
+	@RequestMapping(value="/login", method=RequestMethod.POST)
+	public String login(@ModelAttribute CustomerVO cust, Model model, HttpSession session) {
+		customerService.login(cust, session);
+		return "redirect:/home";
+	}
+	
+	
+	
+	//Log in
+	@RequestMapping(value="/loginCheck", method=RequestMethod.POST)
+	public ModelAndView loginCheck(@ModelAttribute CustomerVO vo, HttpSession session) {
+		
+		boolean result = customerService.loginCheck(vo, session);
+		ModelAndView mav = new ModelAndView();
+		
+		mav.setViewName("login");
+		
+		if(result) {
+			mav.addObject("msg","성공");
+		}else {
+			mav.addObject("msg","실패");
+		}
+		
+		return mav;
+	}
+	
+	//Log out
+	@RequestMapping(value="/logout")
+	public ModelAndView logout(HttpSession session) {
+		
+		customerService.logout(session);
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("logout");
+		mav.addObject("msg", "logout");
+		
+		return mav;
+	}
+	
+	// go to Join
+	@RequestMapping(value="/join", method=RequestMethod.GET)
+	public String insertCust(Model model) {
+		System.out.println("You have entered the Join maprequest");
+		return "join";
+	}
+	
+	// Join to DB
+	@RequestMapping(value="/join", method=RequestMethod.POST)
+	public String insertCust(/*@ModelAttribute("cust") @Valid */CustomerVO cust, 
+			Model model/*, RedirectAttributes redirectAttrs*/) {
+		customerService.insertCust(cust);
+		System.out.println("You have inserted Join to DB");
+		return "redirect:/login";
+	}
+
+	// Count customers
+	@RequestMapping(value="/custcount") // URL주소 뒤에 해당 사이트에 요청을 보내라
 	public String customerCount(
 		@RequestParam(value="deptid", required=false, defaultValue="0") 
 		int deptid, Model model) {
@@ -32,19 +103,7 @@ public class CustomerController {
 		}else {
 			model.addAttribute("custcount", customerService.getCount(deptid));
 		}
-		return "ootd/custcount";
+		return "/custcount";
 	}
 	
-	@RequestMapping(value="/join/add", method=RequestMethod.POST)
-	public String insertCust(/*@ModelAttribute("cust") @Valid */CustomerVO cust, 
-			Model model/*, RedirectAttributes redirectAttrs*/) {
-		System.out.println("/join/add");
-//		try {
-//			customerService.insertCust(cust);
-//		}catch(RuntimeException e) {
-//			redirectAttrs.addFlashAttribute("message", e.getMessage());
-//		}
-		return "redirect:/login";
-	}
-
 }
