@@ -612,7 +612,7 @@
         <label for="inputPhoneNumber" class="col-lg-2 control-label">성별</label>
         <div class="col-lg-10">
             <select class="form-control" id="gender" name="custGender">
-                <option value="M">남</option>
+                <option value="M">남자</option>
                 <option value="F">여</option>
             </select>
         </div>
