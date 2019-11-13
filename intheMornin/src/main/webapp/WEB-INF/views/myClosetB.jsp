@@ -84,130 +84,6 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 <script type="text/javascript" language="JavaScript" src="https://ssl.pstatic.net/static.checkout/layout/201911010009/js/customer/layout.snb.js"></script>
 <script type="text/javascript" language="JavaScript" src="https://ssl.pstatic.net/static.checkout/layout/201911010009/js/customer/checkout.nclktag.js"></script>
 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
-<link rel="stylesheet" type="text/css" href="/css/result-light.css">
-<style id="compiled-css" type="text/css"></style>
-<script type="text/javascript">//<![CDATA[
-
-    $(window).load(function(){
-      
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            
-            reader.onload = function (e) {
-                $('#blah').attr('src', e.target.result);
-            }
-            
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-    
-    $("#imgInp").change(function(){
-        readURL(this);
-    });
-
-    });
-
-  //]]></script>
-
-<script>
-         
-        $(function(){
-            //모달을 전역변수로 선언
-            var modalContents = $(".modal-contents");
-            var modal = $("#defaultModal");
-             
-            //------- 검사하여 상태를 class에 적용
-            $('#type').keyup(function(event){
-                 
-                var divType = $('#divType');
-                 
-                if($('#type').val()==""){
-                    divType.removeClass("has-success");
-                    divType.addClass("has-error");
-                }else{
-                    divType.removeClass("has-error");
-                    divType.addClass("has-success");
-                }
-            });
-             
-            $('#color').keyup(function(event){
-                 
-                var divColor = $('#divColor');
-                 
-                if($('#color').val()==""){
-                    divColor.removeClass("has-success");
-                    divColor.addClass("has-error");
-                }else{
-                    divColor.removeClass("has-error");
-                    divColor.addClass("has-success");
-                }
-            });
-
-			$('#season').keyup(function(event){
-                 
-				 var divSeason = $('#divSeason');
-				  
-				 if($('#season').val()==""){
-					divSeason.removeClass("has-success");
-					divSeason.addClass("has-error");
-				 }else{
-					divSeason.removeClass("has-error");
-					divSeason.addClass("has-success");
-				 }
-			 });
-			
-			 $( "form" ).submit(function( event ) {
-                
-				 var divType = $('#divType');
-				 var divColor = $('#divColor');
-				 var divSeason = $('#divSeason');
-			
-				if($('#type').val()==""){
-                    modalContents.text("옷 종류를 입력해주세요");
-                    modal.modal('show');
-                     
-                    divType.removeClass("has-success");
-                    divType.addClass("has-error");
-                    $('#type').focus();
-                    return false;
-                }else{
-                    divType.removeClass("has-error");
-                    divType.addClass("has-success");
-                }
-
-				if($('#color').val()==""){
-                    modalContents.text("옷 색상를 입력해주세요");
-                    modal.modal('show');
-                     
-                    divColor.removeClass("has-success");
-                    divColor.addClass("has-error");
-                    $('#color').focus();
-                    return false;
-                }else{
-                    divColor.removeClass("has-error");
-                    divColor.addClass("has-success");
-                }
-
-				if($('#season').val()==""){
-                    modalContents.text("옷 계절를 입력해주세요");
-                    modal.modal('show');
-                     
-                    divSeason.removeClass("has-success");
-                    divSeason.addClass("has-error");
-                    $('#season').focus();
-                    return false;
-                }else{
-                    divSeason.removeClass("has-error");
-                    divSeason.addClass("has-success");
-                }
-			});
-             
-			});
-			 
-		</script>
-
 </head>
 <body>
 	<div>
@@ -227,11 +103,11 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                 </div>
                 <div class="collapse navbar-collapse" id="nav_menu">
                     <ul class="nav navbar-nav navbar-right" >
-                        <li class="active">
+                        <li>
                             <a href="home.html">TODAY</a>
                         </li>
                         <li>
-                            <a href="mycloset.html">MY CLOSET</a>
+                            <a href="mycloset.html">MY PAGE</a>
                         </li>
                         <li>
                             <a href="login.html"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
@@ -266,52 +142,76 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
         
         <!-- content -->
 	<div id="content" class="subpg _root">
-		<form id="form1" style="display: inline-block; width: 50%;">
-			<img id="blah" src="#" alt="이미지 미리보기" width="400" height="400" />
-			<input type='file' id="imgInp" class="inp-img" accept=".jpg, .png" />
-		</form>
-		<div class="modal fade" id="defaultModal">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h4 class="modal-title">알림</h4>
-					</div>
-					<div class="modal-body">
-						<p class="modal-contents"></p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
-		<!--// 모달창 -->
-		<form style="display: inline-block;" class="form-horizontal" role="form" method="post" action="javascript:alert( '의상이 등록되었습니다.' );">
-			<div class="form-group" id="divType">
-				<label for="inputType" class="col-lg-2 control-label">타입</label>
-					<div class="col-lg-10">
-						<input type="text" class="form-control" id="type" data-rule-required="true" placeholder="옷의 타입" maxlength="50">
-					</div>
+		<div>
+			<div class="ask_sc">
+			    <div style="display: inline-block; margin-left: 28%;">
+			        <a href="mycloset(outer).html" style="font-size: 20px; color: black; font-weight: 500;">OUTER</a>
+			    </div>
+			    <div style="display: inline-block; margin-left: 10%;">
+			            <a href="mycloset(top).html" style="font-size: 20px; color: black; font-weight: 500;">TOP</a>
+			    </div>
+			    <div style="display: inline-block; margin-left: 10%;">
+			        <a href="mycloset(bottom).html" style="font-size: 20px; color: black; font-weight: 500;">BOTTOM</a>
+                </div>
+                <button type="button" class="btn btn-defualt" style="float: right;" onclick="location.href='be.html'">EDIT</button>
 			</div>
-			<div class="form-group" id="divColor">
-				<label for="inputColor" class="col-lg-2 control-label">색상</label>
-					<div class="col-lg-10">
-						<input type="text" class="form-control" id="color" data-rule-required="true" placeholder="옷의 색상" maxlength="50">
-					</div>
+			<div>
+			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+			        <ul style="margin-top: 10%;">
+			            <li class="goods_pay_item ">
+			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+			                    <img src="댕댕이.jpg" width="170" height="237">				
+			                </a>
+			            </li>
+			        </ul>
+			    </div>
+			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+			        <ul style="margin-top: 10%;">
+			            <li class="goods_pay_item ">
+			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+			                    <img src="댕댕이.jpg" width="170" height="237">				
+			                </a>
+			            </li>
+			        </ul>
+			    </div>
+			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+			        <ul style="margin-top: 10%;">
+			            <li class="goods_pay_item ">
+			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+			                    <img src="댕댕이.jpg" width="170" height="237">				
+			                </a>
+			            </li>
+			        </ul>
+			    </div>
+			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+		            <ul style="margin-top: 10%;">
+		                <li class="goods_pay_item ">
+		                    <a href="/orderStatus/2019103137492141" class="goods_thumb">
+		                        <img src="댕댕이.jpg" width="170" height="237">				
+		                    </a>
+		                </li>
+		            </ul>
+			    </div>
+			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+			        <ul style="margin-top: 10%;">
+			            <li class="goods_pay_item ">
+			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+			                    <img src="댕댕이.jpg" width="170" height="237">				
+			                </a>
+			            </li>
+			        </ul>
+			    </div>
+			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+			        <ul style="margin-top: 10%;">
+			            <li class="goods_pay_item ">
+			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+			                    <img src="댕댕이.jpg" width="170" height="237">				
+			                </a>
+			            </li>
+			        </ul>
+			    </div>
 			</div>
-			<div class="form-group" id="divSeason">
-				<label for="inputSeason" class="col-lg-2 control-label">계절</label>
-					<div class="col-lg-10">
-						<input type="text" class="form-control" id="season" data-rule-required="true" placeholder="옷의 계절" maxlength="50">
-					</div>
-			</div>
-			<div class="form-group">
-				<div class="col-lg-offset-2 col-lg-10">
-					<button type="submit" class="btn btn-default">등록</button>
-				</div>
-			</div>
-		</form>
+		</div>
 	</div>
 </body>
 </html>

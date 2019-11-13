@@ -103,11 +103,11 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                 </div>
                 <div class="collapse navbar-collapse" id="nav_menu">
                     <ul class="nav navbar-nav navbar-right" >
-                        <li class="active">
+                        <li>
                             <a href="home.html">TODAY</a>
                         </li>
                         <li>
-                            <a href="#">MY CLOSET</a>
+                            <a href="mycloset.html">MY PAGE</a>
                         </li>
                         <li>
                             <a href="login.html"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
@@ -133,80 +133,85 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                     <dd style="font-size: 13px; margin: 10%">성별 연동</dd>
                 </dl>
                 <dl class="my_npoint" style="text-align: center;">
-                    <dt style="font-size: 15px;">포인트</dt>
-                    <dd style="font-size: 13px; margin-top: 10%;">포인트 연동 원</dd>
+                    <dt style="font-size: 15px;">TOTAL CLOTHES</dt>
+                    <dd style="font-size: 13px; margin-top: 10%;">옷 갯수 연동</dd>
                 </dl>
             </div>
-        </div>
-	</div>
+		</div>
+   </div>
         
         <!-- content -->
-<div id="content" class="subpg _root">
-	<div>
-		<div class="ask_sc" style="text-align: right;">
-	    	<a href="mycloset(outer).html" style="font-size: 20px; color: black; font-weight: 500;">MY CLOSET</a>
-		</div>
-	
-		<div>
-	    	<div style="font-size: 20px; font-weight: 500; margin: 3%;">
-	        	#OOYD
-	    	</div>
-		    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
-		        <ul style="margin-top: 10%;">
-		            <li class="goods_pay_item ">
-		                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-		                    <img src="댕댕이.jpg" width="170" height="237">				
-		                </a>
-		            </li>
-		        </ul>
-		    </div>
-		    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
-		        <ul style="margin-top: 10%;">
-		            <li class="goods_pay_item ">
-		                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-		                    <img src="댕댕이.jpg" width="170" height="237">				
-		                </a>
-		            </li>
-		        </ul>
-		    </div>
-		    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
-		        <ul style="margin-top: 10%;">
-		            <li class="goods_pay_item ">
-		                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-		                    <img src="댕댕이.jpg" width="170" height="237">				
-		                </a>
-		            </li>
-		        </ul>
-		    </div>
-		    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
-		        <ul style="margin-top: 10%;">
-		            <li class="goods_pay_item ">
-		                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-		                    <img src="댕댕이.jpg" width="170" height="237">				
-		                </a>
-		            </li>
-		        </ul>
-		    </div>
-		    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
-		        <ul style="margin-top: 10%;">
-		            <li class="goods_pay_item ">
-		                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-		                    <img src="댕댕이.jpg" width="170" height="237">				
-		                </a>
-		            </li>
-		        </ul>
-		    </div>
-		    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
-		        <ul style="margin-top: 10%;">
-		            <li class="goods_pay_item ">
-		                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-		                    <img src="댕댕이.jpg" width="170" height="237">				
-		                </a>
-		            </li>
-		        </ul>
-		    </div>
-		</div>
-	</div>
-</div>
+        <div id="content" class="subpg _root">
+            <div>
+                <div class="ask_sc">
+                    <div style="display: inline-block; margin-left: 28%;">
+                        <a href="mycloset(outer).html" style="font-size: 20px; color: black; font-weight: 500;">OUTER</a>
+                    </div>
+                    <div style="display: inline-block; margin-left: 10%;">
+                            <a href="mycloset(top).html" style="font-size: 20px; color: black; font-weight: 500;">TOP</a>
+                    </div>
+                    <div style="display: inline-block; margin-left: 10%;">
+                        <a href="mycloset(bottom).html" style="font-size: 20px; color: black; font-weight: 500;">BOTTOM</a>
+                    </div>
+                    <button type="button" class="btn btn-defualt" style="float: right;" onclick="location.href='oe.html'">EDIT</button>
+                </div>
+                <div>
+                    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+                        <ul style="margin-top: 10%;">
+                            <li class="goods_pay_item ">
+                                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+                                    <img src="댕댕이.jpg" width="170" height="237">				
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+                        <ul style="margin-top: 10%;">
+                            <li class="goods_pay_item ">
+                                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+                                    <img src="댕댕이.jpg" width="170" height="237">				
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+                        <ul style="margin-top: 10%;">
+                            <li class="goods_pay_item ">
+                                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+                                    <img src="댕댕이.jpg" width="170" height="237">				
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+                        <ul style="margin-top: 10%;">
+                            <li class="goods_pay_item ">
+                                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+                                    <img src="댕댕이.jpg" width="170" height="237">				
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+                        <ul style="margin-top: 10%;">
+                            <li class="goods_pay_item ">
+                                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+                                    <img src="댕댕이.jpg" width="170" height="237">				
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
+                        <ul style="margin-top: 10%;">
+                            <li class="goods_pay_item ">
+                                <a href="/orderStatus/2019103137492141" class="goods_thumb">
+                                    <img src="댕댕이.jpg" width="170" height="237">				
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
