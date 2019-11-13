@@ -55,11 +55,32 @@ public class CustomerController {
 		return "myClosetT";
 	}
 	
-	//go to myCLoset
+	//go to myCLosetB
 	@RequestMapping(value="/myClosetB", method=RequestMethod.GET)
 	public String myClosetB(Model model) {
 		System.out.println("You have entered the myClosetB maprequest");
 		return "myClosetB";
+	}
+	
+	//go to editB
+	@RequestMapping(value="/editB", method=RequestMethod.GET)
+	public String editB(Model model) {
+		System.out.println("You have entered the editB maprequest");
+		return "editB";
+	}
+	
+	//go to editO
+	@RequestMapping(value="/editO", method=RequestMethod.GET)
+	public String editO(Model model) {
+		System.out.println("You have entered the editO maprequest");
+		return "editO";
+	}
+	
+	//go to editT
+	@RequestMapping(value="/editT", method=RequestMethod.GET)
+	public String editT(Model model) {
+		System.out.println("You have entered the editT maprequest");
+		return "editT";
 	}
 	
 	//go to Login
