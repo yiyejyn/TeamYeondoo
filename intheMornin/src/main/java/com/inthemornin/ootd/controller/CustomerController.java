@@ -23,16 +23,55 @@ public class CustomerController {
 	@Autowired
 	ICustomerService customerService;
 	
-	@RequestMapping(value="ootd/custcount") // URL주소 뒤에 해당 사이트에 요청을 보내라
-	public String customerCount(
-		@RequestParam(value="deptid", required=false, defaultValue="0") 
-		int deptid, Model model) {
-		if(deptid==0) {
-			model.addAttribute("custcount", customerService.getCount());
+	@RequestMapping("")
+	public ModelAndView home(@ModelAttribute CustomerVO cust, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("home");
+		return mav;
+	}
+	
+	@RequestMapping("/login")
+	public ModelAndView login(@ModelAttribute CustomerVO cust, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("login");
+		return mav;
+	}
+	
+	//로그인 처리
+	@RequestMapping("/loginCheck")
+	public ModelAndView loginCheck(@ModelAttribute CustomerVO vo, HttpSession session) {
+		
+		boolean result = customerService.loginCheck(vo, session);
+		ModelAndView mav = new ModelAndView();
+		
+		mav.setViewName("login");
+		
+		if(result) {
+			mav.addObject("msg","성공");
 		}else {
-			model.addAttribute("custcount", customerService.getCount(deptid));
+			mav.addObject("msg","실패");
 		}
-		return "ootd/custcount";
+		
+		return mav;
+	}
+	
+	//로그아웃 처리
+	@RequestMapping("logout")
+	public ModelAndView logout(HttpSession session) {
+		
+		customerService.logout(session);
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("logout");
+		mav.addObject("msg", "logout");
+		
+		return mav;
+	}
+	
+	@RequestMapping("/join")
+	public ModelAndView join(@ModelAttribute CustomerVO cust, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("join");
+		return mav;
 	}
 	
 	@RequestMapping(value="/join/add", method=RequestMethod.POST)
@@ -47,4 +86,16 @@ public class CustomerController {
 		return "redirect:/login";
 	}
 
+	@RequestMapping(value="ootd/custcount") // URL주소 뒤에 해당 사이트에 요청을 보내라
+	public String customerCount(
+		@RequestParam(value="deptid", required=false, defaultValue="0") 
+		int deptid, Model model) {
+		if(deptid==0) {
+			model.addAttribute("custcount", customerService.getCount());
+		}else {
+			model.addAttribute("custcount", customerService.getCount(deptid));
+		}
+		return "ootd/custcount";
+	}
+	
 }
