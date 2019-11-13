@@ -118,7 +118,7 @@
                 var divPassword = $('#divPassword');
                 var divPasswordCheck = $('#divPasswordCheck');
                 var divName = $('#divName');
-                var divNickname = $('#divAddres');
+                var divAddress = $('#divAddress');
                  
                 //회원가입약관
                 if($('#provisionYn:checked').val()=="N"){
@@ -603,13 +603,13 @@
             <div class="form-group" id="divPassword">
                 <label for="inputPassword" class="col-lg-2 control-label">패스워드</label>
                 <div class="col-lg-10">
-                    <input type="password" class="form-control" id="password" name="cust_password" data-rule-required="true" placeholder="패스워드" maxlength="30">
+                    <input type="password" class="form-control" id="password" name="cust_password" data-rule-required="true" placeholder="패스워드" minlength="6">
                 </div>
             </div>
             <div class="form-group" id="divPasswordCheck">
                 <label for="inputPasswordCheck" class="col-lg-2 control-label">패스워드 확인</label>
                 <div class="col-lg-10">
-                    <input type="password" class="form-control" id="passwordCheck" data-rule-required="true" placeholder="패스워드 확인" maxlength="30">
+                    <input type="password" class="form-control" id="passwordCheck" data-rule-required="true" placeholder="패스워드 확인" minlength="6">
                 </div>
             </div>
             <div class="form-group" id="divName">
