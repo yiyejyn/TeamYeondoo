@@ -13,16 +13,12 @@ public class Main {
 		
 		AbstractApplicationContext context =
 				new GenericXmlApplicationContext("spring/application-config.xml");
-		IClothService clothService = 
-				context.getBean("clothService", IClothService.class);
+		ICustomerService customerService = 
+				context.getBean("customerService", ICustomerService.class);
 			
-			System.out.println("-- 사원의 수 조회");
-			System.out.println(clothService.getCount());
-			System.out.println(clothService.getCount(10));
-			
-
-			
-			
+			System.out.println("제발 뭐라도 되면 좋겠다...");
+			System.out.println(customerService.getCount());
+			System.out.println(customerService.getCount(10));
 			
 		context.close();
 	}
