@@ -14,7 +14,11 @@
   	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
+	
+	<script>
+		
+	</script>
+	
 </head>
 <body>
 	<div>
@@ -29,7 +33,7 @@
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="">
                         #OOTD
                     </a>
                 </div>
@@ -39,10 +43,10 @@
                             <a href="#">TODAY</a>
                         </li>
                         <li>
-                            <a href="<c:url value='myPage'/>">MY PAGE</a>
+                            <a href="<c:url value='login/myPage'/>">MY PAGE</a>
                         </li>
                         <li>
-                            <a href="login.html"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
+                            <a href="<c:url value='login'/>"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
                         </li>
                     </ul>
                 </div>
