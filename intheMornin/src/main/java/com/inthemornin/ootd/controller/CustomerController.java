@@ -38,12 +38,13 @@ public class CustomerController {
 	@RequestMapping(value="/join/add", method=RequestMethod.POST)
 	public String insertCust(/*@ModelAttribute("cust") @Valid */CustomerVO cust, 
 			Model model/*, RedirectAttributes redirectAttrs*/) {
+		System.out.println("/join/add");
 //		try {
-			customerService.insertCust(cust);
+//			customerService.insertCust(cust);
 //		}catch(RuntimeException e) {
 //			redirectAttrs.addFlashAttribute("message", e.getMessage());
 //		}
-		return "redirect:/join";
+		return "redirect:/login";
 	}
 
 }
