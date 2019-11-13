@@ -74,10 +74,17 @@ public class CustomerController {
 		return mav;
 	}
 	
-	@RequestMapping(value="/join/add", method=RequestMethod.POST)
+	@RequestMapping(value="/join", method=RequestMethod.GET)
+	public String insertCust(Model model) {
+		System.out.println("You have entered the login maprequest");
+		return "join";
+	}
+	
+	@RequestMapping(value="/join", method=RequestMethod.POST)
 	public String insertCust(/*@ModelAttribute("cust") @Valid */CustomerVO cust, 
 			Model model/*, RedirectAttributes redirectAttrs*/) {
-		System.out.println("/join/add");
+		customerService.insertCust(cust);
+		System.out.println("You have entered the login maprequest...");
 //		try {
 //			customerService.insertCust(cust);
 //		}catch(RuntimeException e) {
@@ -86,7 +93,7 @@ public class CustomerController {
 		return "redirect:/login";
 	}
 
-	@RequestMapping(value="ootd/custcount") // URL주소 뒤에 해당 사이트에 요청을 보내라
+	@RequestMapping(value="/custcount") // URL주소 뒤에 해당 사이트에 요청을 보내라
 	public String customerCount(
 		@RequestParam(value="deptid", required=false, defaultValue="0") 
 		int deptid, Model model) {
@@ -95,7 +102,7 @@ public class CustomerController {
 		}else {
 			model.addAttribute("custcount", customerService.getCount(deptid));
 		}
-		return "ootd/custcount";
+		return "/custcount";
 	}
 	
 }

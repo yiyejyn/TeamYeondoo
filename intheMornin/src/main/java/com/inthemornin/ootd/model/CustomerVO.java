@@ -2,64 +2,61 @@ package com.inthemornin.ootd.model;
 
 public class CustomerVO {
 
-	private String cust_id;
-	private String cust_password;
-	private String cust_name;
-	private String cust_address;
-	private String cust_gender;
-	private String cust_rank;
-	private int cust_point;
+	private String custId;
+	private String custPassword;
+	private String custName;
+	private String custAddress;
+	private String custGender;
+	private String custRank;
+	private int custPoint;
 	
-	
-	public String getCust_id() {
-		return cust_id;
+	public String getCustId() {
+		return custId;
 	}
-	public void setCust_id(String cust_id) {
-		this.cust_id = cust_id;
+	public void setCustId(String custId) {
+		this.custId = custId;
 	}
-	public String getCust_password() {
-		return cust_password;
+	public String getCustPassword() {
+		return custPassword;
 	}
-	public void setCust_password(String cust_password) {
-		this.cust_password = cust_password;
+	public void setCustPassword(String custPassword) {
+		this.custPassword = custPassword;
 	}
-	public String getCust_name() {
-		return cust_name;
+	public String getCustName() {
+		return custName;
 	}
-	public void setCust_name(String cust_name) {
-		this.cust_name = cust_name;
+	public void setCustName(String custName) {
+		this.custName = custName;
 	}
-	public String getCust_address() {
-		return cust_address;
+	public String getCustAddress() {
+		return custAddress;
 	}
-	public void setCust_address(String cust_address) {
-		this.cust_address = cust_address;
+	public void setCustAddress(String custAddress) {
+		this.custAddress = custAddress;
 	}
-	public String getCust_gender() {
-		return cust_gender;
+	public String getCustGender() {
+		return custGender;
 	}
-	public void setCust_gender(String cust_gender) {
-		this.cust_gender = cust_gender;
+	public void setCustGender(String custGender) {
+		this.custGender = custGender;
 	}
-	public String getCust_rank() {
-		return cust_rank;
+	public String getCustRank() {
+		return custRank;
 	}
-	public void setCust_rank(String cust_rank) {
-		this.cust_rank = cust_rank;
+	public void setCustRank(String custRank) {
+		this.custRank = custRank;
 	}
-	public int getCust_point() {
-		return cust_point;
+	public int getCustPoint() {
+		return custPoint;
 	}
-	public void setCust_point(int cust_point) {
-		this.cust_point = cust_point;
+	public void setCustPoint(int custPoint) {
+		this.custPoint = custPoint;
 	}
 
 	@Override
 	public String toString() {
-		return "CustomerVO [cust_id=" + cust_id + ", cust_password=" + cust_password + ", cust_name=" + cust_name
-				+ ", cust_address=" + cust_address + ", cust_gender=" + cust_gender + ", cust_rank=" + cust_rank
-				+ ", cust_point=" + cust_point + "]";
+		return "CustomerVO [custId=" + custId + ", custPassword=" + custPassword + ", custName=" + custName
+				+ ", custAddress=" + custAddress + ", custGender=" + custGender + ", custRank=" + custRank
+				+ ", custPoint=" + custPoint + "]";
 	}
-	
-	
 }
