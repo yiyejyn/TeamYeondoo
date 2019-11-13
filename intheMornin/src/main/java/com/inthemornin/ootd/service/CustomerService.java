@@ -1,5 +1,8 @@
 package com.inthemornin.ootd.service;
 
+import java.util.List;
+import java.util.Map;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +41,7 @@ public class CustomerService implements ICustomerService{
 	public boolean loginCheck(CustomerVO vo, HttpSession session) {
 		boolean result = customerRepository.loginCheck(vo, session);
 		if (result == true) {
-			session.setAttribute("cust_id", vo.getCust_id());
+			session.setAttribute("custId", vo.getCustId());
 		}
 		return result;
 	}
@@ -47,6 +50,11 @@ public class CustomerService implements ICustomerService{
 	public void logout(HttpSession session) {
 		customerRepository.logout(session);
 		
+	}
+	
+	@Override
+	public List<Map<String, Object>> getAllGender() {
+		return customerRepository.getAllGender();
 	}
 	
 }

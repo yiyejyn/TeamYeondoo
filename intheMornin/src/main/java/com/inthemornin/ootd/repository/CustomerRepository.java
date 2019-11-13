@@ -24,13 +24,13 @@ public class CustomerRepository implements ICustomerRepository{
 		public CustomerVO mapRow(ResultSet rs, int count) 
 				throws SQLException {
 			CustomerVO customer = new CustomerVO();
-			customer.setCust_id(rs.getString("cust_id"));
-			customer.setCust_password(rs.getString("cust_password"));
-			customer.setCust_name(rs.getString("cust_name"));
-			customer.setCust_address(rs.getString("cust_address"));
-			customer.setCust_gender(rs.getString("cust_gender"));
-			customer.setCust_rank(rs.getString("cust_rank"));
-			customer.setCust_point(rs.getInt("cust_point"));			
+			customer.setCustId(rs.getString("custId"));
+			customer.setCustPassword(rs.getString("custPassword"));
+			customer.setCustName(rs.getString("custName"));
+			customer.setCustAddress(rs.getString("custAddress"));
+			customer.setCustGender(rs.getString("custGender"));
+			customer.setCustRank(rs.getString("custRank"));
+			customer.setCustPoint(rs.getInt("custPoint"));			
 			
 			return customer;
 		}			
@@ -51,16 +51,14 @@ public class CustomerRepository implements ICustomerRepository{
 	@Override
 	public void insertCust(CustomerVO cust) {
 		String sql = "insert into customers (cust_id, cust_password, "
-				+ "cust_name, cust_address, cust_gender, cust_rank, cust_point) "
-				+ "values (?,?,?,?,?,'Lv1',0)";
+				+ "cust_name, cust_address, cust_gender) "
+				+ "values (?,?,?,?,?)";
 		jdbcTemplate.update(sql, 
-				cust.getCust_id(), 
-				cust.getCust_password(), 
-				cust.getCust_name(),
-				cust.getCust_address(),
-				cust.getCust_gender(),
-				cust.getCust_rank(),
-				cust.getCust_point()
+				cust.getCustId(), 
+				cust.getCustPassword(), 
+				cust.getCustName(),
+				cust.getCustAddress(),
+				cust.getCustGender()
 		);
 	}
 	
@@ -72,13 +70,13 @@ public class CustomerRepository implements ICustomerRepository{
 			public CustomerVO mapRow(ResultSet rs, int count) 
 					throws SQLException {
 				CustomerVO customer = new CustomerVO();
-				customer.setCust_id(rs.getString("cust_id"));
-				customer.setCust_password(rs.getString("cust_password"));
-				customer.setCust_name(rs.getString("cust_name"));
-				customer.setCust_address(rs.getString("cust_address"));
-				customer.setCust_gender(rs.getString("cust_gender"));
-				customer.setCust_rank(rs.getString("cust_rank"));
-				customer.setCust_point(rs.getInt("cust_point"));			
+				customer.setCustId(rs.getString("custId"));
+				customer.setCustPassword(rs.getString("custPassword"));
+				customer.setCustName(rs.getString("custName"));
+				customer.setCustAddress(rs.getString("custAddress"));
+				customer.setCustGender(rs.getString("custGender"));
+				customer.setCustRank(rs.getString("custRank"));
+				customer.setCustPoint(rs.getInt("custPoint"));			
 				
 				return customer;
 			}			
@@ -93,19 +91,28 @@ public class CustomerRepository implements ICustomerRepository{
 		return jdbcTemplate.queryForObject(sql,  new CustomerMapper(), custid);
 	}
 	
+	@Override
 	public void login(CustomerVO vo, HttpSession session) {
 		System.out.println("===> 로그인 기능 처리");
 		session.setAttribute("cust_id", vo);
 	}
-
+	
+	@Override
 	public boolean loginCheck(CustomerVO vo, HttpSession session) {
 		System.out.println("===> 로그인 여부 확인");
 		return (session.getAttribute("cust_id") == null)? false:true;
 	}
-
+	
+	@Override
 	public void logout(HttpSession session) {
 		System.out.println("===> 로그아웃 기능 처리");
 		session.invalidate();
+	}
+	
+	@Override
+	public List<Map<String, Object>> getAllGender() {
+		String sql = "select cust_gender as custGender from customers";
+		return jdbcTemplate.queryForList(sql);
 	}
 	
 }

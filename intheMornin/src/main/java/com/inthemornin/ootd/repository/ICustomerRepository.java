@@ -17,4 +17,5 @@ public interface ICustomerRepository {
 	void login(CustomerVO vo, HttpSession session);
 	boolean loginCheck(CustomerVO vo, HttpSession session);
 	void logout(HttpSession session);
+	List<Map<String, Object>> getAllGender();
 }

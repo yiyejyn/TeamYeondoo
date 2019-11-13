@@ -118,7 +118,7 @@
                 var divPassword = $('#divPassword');
                 var divPasswordCheck = $('#divPasswordCheck');
                 var divName = $('#divName');
-                var divNickname = $('#divAddres');
+                var divAddress = $('#divAddress');
                  
                 //회원가입약관
                 if($('#provisionYn:checked').val()=="N"){
@@ -304,7 +304,7 @@
                  
  
  
-        <form class="form-horizontal" role="form" method="post" action="/join/add">
+        <form class="form-horizontal" role="form" method="post" action="./join">
             <div class="form-group">
                 <label for="provision" class="col-lg-2 control-label">회원가입약관</label>
                 <div class="col-lg-10" id="provision">
@@ -597,13 +597,13 @@
             <div class="form-group" id="divId">
                 <label for="inputId" class="col-lg-2 control-label">아이디</label>
                 <div class="col-lg-10">
-                    <input type="email" name="cust_id" class="form-control" id="id" data-rule-required="true" placeholder="이메일 형식으로 작성" maxlength="40">
+                    <input type="email" name="custId" class="form-control" id="id" data-rule-required="true" placeholder="이메일 형식으로 작성" maxlength="40">
                 </div>
             </div>
             <div class="form-group" id="divPassword">
                 <label for="inputPassword" class="col-lg-2 control-label">패스워드</label>
                 <div class="col-lg-10">
-                    <input type="password" class="form-control" id="password" name="cust_password" data-rule-required="true" placeholder="패스워드" maxlength="30">
+                    <input type="password" class="form-control" id="password" name="custPassword" data-rule-required="true" placeholder="패스워드" maxlength="30">
                 </div>
             </div>
             <div class="form-group" id="divPasswordCheck">
@@ -615,22 +615,22 @@
             <div class="form-group" id="divName">
                 <label for="inputName" class="col-lg-2 control-label">이름</label>
                 <div class="col-lg-10">
-                    <input type="text" name="cust_name" class="form-control onlyHangul" id="name" data-rule-required="true" placeholder="한글만 입력 가능합니다." maxlength="15">
+                    <input type="text" name="custName" class="form-control onlyHangul" id="name" data-rule-required="true" placeholder="한글만 입력 가능합니다." maxlength="15">
                 </div>
             </div>
              
             <div class="form-group" id="divAddress">
                 <label for="inputAddress" class="col-lg-2 control-label">주소</label>
                 <div class="col-lg-10">
-                    <input type="text" name="cust_address" class="form-control" id="address" data-rule-required="true" placeholder="주소" maxlength="50">
+                    <input type="text" name="custAddress" class="form-control" id="address" data-rule-required="true" placeholder="주소" maxlength="50">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputPhoneNumber" class="col-lg-2 control-label">성별</label>
                 <div class="col-lg-10">
-                    <select class="form-control" id="gender">
-                        <option value="M">남</option>
-                        <option value="F">여</option>
+                    <select class="form-control" id="gender" name="custGender">
+                        <option value="남자">남자</option>
+                        <option value="여자">여자</option>
                     </select>
                 </div>
             </div>
