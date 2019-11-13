@@ -3,6 +3,8 @@ package com.inthemornin.ootd.service;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -52,8 +54,8 @@ public class ClothService implements IClothService {
 	}
 	
 	@Override
-	public void insertCloth(ClothesVO cloth, CustomerVO cust) {
-		clothRepository.insertCloth(cloth, cust);
+	public void insertCloth(ClothesVO cloth, HttpSession session) {
+		clothRepository.insertCloth(cloth, session);
 	}
 
 	@Override

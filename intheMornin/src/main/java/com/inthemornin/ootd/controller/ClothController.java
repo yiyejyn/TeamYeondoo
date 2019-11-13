@@ -2,6 +2,8 @@ package com.inthemornin.ootd.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -61,8 +63,8 @@ public class ClothController {
 	
 	//Upload to DB
 	@RequestMapping(value="/cloth", method=RequestMethod.POST)
-	public String insertCloth(ClothesVO cloth, CustomerVO cust, Model model) {
-		clothService.insertCloth(cloth, cust);
+	public String insertCloth(ClothesVO cloth, HttpSession session, Model model) {
+		clothService.insertCloth(cloth, session);
 		System.out.println("You have inserted Upload to DB");
 		return "redirect:/mycloset";
 	}

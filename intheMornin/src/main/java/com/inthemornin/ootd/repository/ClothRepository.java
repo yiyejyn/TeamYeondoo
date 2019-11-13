@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -54,9 +56,9 @@ public class ClothRepository implements IClothRepository{
 			@Override
 			public ClothesVO mapRow(ResultSet rs, int count) throws SQLException {		
 				ClothesVO cloth = new ClothesVO();		
-				cloth.setClothId(rs.getInt("clothId"));
-				cloth.setOutfitsType(rs.getString("outfitsType"));
-				cloth.setCustId(rs.getString("custId"));
+				cloth.setClothId(rs.getInt("cloth_id"));
+				cloth.setOutfitsType(rs.getString("outfits_type"));
+				cloth.setCustId(rs.getString("cust_id"));
 				cloth.setColor(rs.getString("color"));
 				cloth.setSeason(rs.getString("season"));		
 				return cloth;
@@ -100,16 +102,15 @@ public class ClothRepository implements IClothRepository{
 	}
 	
 	@Override
-	public void insertCloth(ClothesVO cloth, CustomerVO cust) {
+	public void insertCloth(ClothesVO cloth, HttpSession session) {
 		String sql = "insert into clothes "
-				+ "(cloth_id, outfits_type, cust_id, color, season) "
-				+ "values (cloth_seq.nextval, ?, ?, ?, ?) "
-				+ "where cust_id=?";
-		jdbcTemplate.update(sql, cloth.getCustId(),
+				+ "(cloth_id, outfits_type, color, season, cust_id) "
+				+ "values (cloth_seq.nextval, ?, ?, ?, ?";
+		jdbcTemplate.update(sql, 
 				cloth.getOutfitsType(),
 				cloth.getColor(),
 				cloth.getSeason(),
-				cust.getCustId());
+				session.getId());
 	}
 	
 	@Override

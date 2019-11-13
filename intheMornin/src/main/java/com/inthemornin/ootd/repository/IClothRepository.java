@@ -3,6 +3,8 @@ package com.inthemornin.ootd.repository;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import com.inthemornin.ootd.model.ClothesVO;
 import com.inthemornin.ootd.model.CustomerVO;
 
@@ -15,6 +17,6 @@ public interface IClothRepository {
 	List<Map<String, Object>> getAllCloth();
 	List<Map<String, Object>> getCustCloth();
 	void updateCloth(ClothesVO cloth);
-	void insertCloth(ClothesVO cloth, CustomerVO cust);
+	void insertCloth(ClothesVO cloth, HttpSession session);
 	void deleteCloth(int cloth_id, String custId);
 }

@@ -63,6 +63,7 @@ public class CustomerController {
 		return "home";
 	}
 	
+	
 	//Log in
 	@RequestMapping(value="/loginCheck", method=RequestMethod.POST)
 	public ModelAndView loginCheck(CustomerVO cust, HttpSession session) {
