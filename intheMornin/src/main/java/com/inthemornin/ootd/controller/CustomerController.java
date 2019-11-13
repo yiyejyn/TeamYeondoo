@@ -27,7 +27,7 @@ public class CustomerController {
 	ICustomerService customerService;
 	
 	//go to Home
-	@RequestMapping("")
+	@RequestMapping("./")
 	public ModelAndView home(@ModelAttribute CustomerVO cust, HttpSession session) {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("home");
@@ -35,17 +35,31 @@ public class CustomerController {
 	}
 	
 	//go to myPage
-	@RequestMapping(value="/login/myPage", method=RequestMethod.GET)
+	@RequestMapping(value="/myPage", method=RequestMethod.GET)
 	public String myPage(Model model) {
 		System.out.println("You have entered the myPage maprequest");
 		return "myPage";
 	}
 	
-	//go to myCLoset
-	@RequestMapping(value="/myPage/myClosetO", method=RequestMethod.GET)
+	//go to myCLosetO
+	@RequestMapping(value="/myClosetO", method=RequestMethod.GET)
 	public String myClosetO(Model model) {
 		System.out.println("You have entered the myClosetO maprequest");
 		return "myClosetO";
+	}
+	
+	//go to myCLosetT
+	@RequestMapping(value="/myClosetO", method=RequestMethod.GET)
+	public String myClosetT(Model model) {
+		System.out.println("You have entered the myClosetO maprequest");
+		return "myClosetT";
+	}
+	
+	//go to myCLoset
+	@RequestMapping(value="/myClosetB", method=RequestMethod.GET)
+	public String myClosetB(Model model) {
+		System.out.println("You have entered the myClosetO maprequest");
+		return "myClosetB";
 	}
 	
 	//go to Login

@@ -103,7 +103,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="">
+                    <a class="navbar-brand" href="./">
                         #OOTD
                     </a>
                 </div>
@@ -113,10 +113,10 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                             <a href="#">TODAY</a>
                         </li>
                         <li>
-                            <a href="<c:url value='login/myPage'/>">MY PAGE</a>
+                            <a href="<c:url value='myPage'/>">MY PAGE</a>
                         </li>
                         <li>
-                            <a href="login.html"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
+                            <a href="login"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
                         </li>
                     </ul>
                 </div>
@@ -154,7 +154,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 <div id="content" class="subpg _root">
 	<div>
 		<div class="ask_sc" style="text-align: right;">
-	    	<a href="<c:url value='myPage/myClosetO'/>" style="font-size: 20px; color: black; font-weight: 500;">MY CLOSET</a>
+	    	<a href="<c:url value='myClosetO'/>" style="font-size: 20px; color: black; font-weight: 500;">MY CLOSET</a>
 		</div>
 	
 		<div>

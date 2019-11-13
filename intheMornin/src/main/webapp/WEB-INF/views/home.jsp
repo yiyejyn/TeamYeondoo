@@ -33,7 +33,7 @@
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="">
+                    <a class="navbar-brand" href="./">
                         #OOTD
                     </a>
                 </div>
@@ -43,7 +43,7 @@
                             <a href="#">TODAY</a>
                         </li>
                         <li>
-                            <a href="<c:url value='login/myPage'/>">MY PAGE</a>
+                            <a href="<c:url value='myPage'/>">MY PAGE</a>
                         </li>
                         <li>
                             <a href="<c:url value='login'/>"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>

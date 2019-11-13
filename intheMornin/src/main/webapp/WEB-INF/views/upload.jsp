@@ -139,20 +139,20 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="./">
                         #OOTD
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="nav_menu">
                     <ul class="nav navbar-nav navbar-right" >
                         <li>
-                            <a href="home.html">TODAY</a>
+                            <a href="#">TODAY</a>
                         </li>
                         <li>
-                            <a href="mycloset.html">MY PAGE</a>
+                            <a href="<c:url value='myPage'/>">MY PAGE</a>
                         </li>
                         <li>
-                            <a href="login.html"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
+                            <a href="<c:url value='login'/>"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
                         </li>
                     </ul>
                 </div>

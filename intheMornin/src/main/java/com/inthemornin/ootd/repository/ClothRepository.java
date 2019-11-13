@@ -106,11 +106,16 @@ public class ClothRepository implements IClothRepository{
 		String sql = "insert into clothes "
 				+ "(cloth_id, outfits_type, color, season, cust_id) "
 				+ "values (cloth_seq.nextval, ?, ?, ?, ?";
+		Object c = new CustomerVO();
+		c = session.getAttribute("customer");
+		System.out.println(c.toString());
 		jdbcTemplate.update(sql, 
 				cloth.getOutfitsType(),
 				cloth.getColor(),
 				cloth.getSeason(),
-				session.getId());
+				cloth.getCustId());
+				
+		
 	}
 	
 	@Override
