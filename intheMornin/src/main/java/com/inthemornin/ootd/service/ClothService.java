@@ -20,15 +20,20 @@ public class ClothService implements IClothService {
 	public int getCount() {
 		return clothRepository.getCount();
 	}
-
+	
 	@Override
-	public int getCount(int deptid) {
-		return clothRepository.getCount(deptid);
+	public int getCustClothCount(String custId) {
+		return clothRepository.getCustClothCount(custId);
 	}
 	
 	@Override
 	public List<ClothesVO> getClothList() {
 		return clothRepository.getClothList();
+	}
+	
+	@Override
+	public ClothesVO getClothInfo(String custId) {
+		return clothRepository.getClothInfo(custId);
 	}
 	
 	@Override
@@ -39,6 +44,21 @@ public class ClothService implements IClothService {
 	@Override
 	public List<Map<String, Object>> getCustCloth() {
 		return clothRepository.getCustCloth();
+	}
+	
+	@Override
+	public void updateCloth(ClothesVO cloth) {
+		clothRepository.updateCloth(cloth);
+	}
+	
+	@Override
+	public void insertCloth(ClothesVO cloth) {
+		clothRepository.insertCloth(cloth);
+	}
+
+	@Override
+	public void deleteCloth(int clothId, String custId) {
+		clothRepository.deleteCloth(clothId, custId);
 	}
 	
 }

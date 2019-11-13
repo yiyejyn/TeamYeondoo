@@ -57,9 +57,9 @@
 		<div class="card-body">
       <form class="form-signin" method="POST" onSubmit="logincall();return false">
         <label for="inputEmail" class="sr-only">Your ID</label>
-        <input type="text" id="uid" class="form-control" placeholder="Your ID" required autofocus><BR>
+        <input type="text" name="custId" id="custId" class="form-control" placeholder="Your ID" required autofocus><BR>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="upw" class="form-control" placeholder="Password" required><br>
+        <input type="password" name="custPassword" id="custPassword" class="form-control" placeholder="Password" required><br>
         <a href="<c:url value='join'/>"> <class="btn btn-lg btn-primary btn-block">회원가입</a><br>
         <button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit">로 그 인</button>
       </form>
