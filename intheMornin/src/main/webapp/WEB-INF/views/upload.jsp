@@ -189,11 +189,11 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			<input type='file' id="imgInp" class="inp-img" accept=".jpg, .png" />
 		</form>
 		
-		<form style="display: inline-block; width: 40%;" class="form-horizontal" role="form" method="post" action="javascript:alert( '의상이 등록되었습니다.' );">
+		<form style="display: inline-block; width: 40%;" class="form-horizontal" role="form" method="post" action="./upload">
 			<div class="form-group" id="divType">
 				<label for="inputType" class="col-lg-2 control-label">타입</label>
 					<div class="col-lg-10" style="width: 140px;">
-                        <select name="type" id="selecttype" class="form-control" data-rule-required="true">
+                        <select name="OutfitsType" id="selecttype" class="form-control" data-rule-required="true">
                             <option value="outer">OUTER</option>
                             <option value="top">TOP</option>
                             <option value="bottom">BOTTOM</option>
@@ -203,7 +203,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			<div class="form-group" id="divColor">
 				<label for="inputColor" class="col-lg-2 control-label">색상</label>
 					<div class="col-lg-10" style="width: 140px;">
-						<input type="color" value="#ff000" class="form-control" id="color" data-rule-required="true">
+						<input type="color" name="color" value="#ff000" class="form-control" id="color" data-rule-required="true">
 					</div>
 			</div>
 			<div class="form-group" id="divSeason">

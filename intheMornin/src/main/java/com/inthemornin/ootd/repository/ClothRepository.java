@@ -25,9 +25,9 @@ public class ClothRepository implements IClothRepository{
 		public ClothesVO mapRow(ResultSet rs, int count) 
 				throws SQLException {
 			ClothesVO cloth = new ClothesVO();
-			cloth.setClothId(rs.getInt("clothId"));
-			cloth.setOutfitsType(rs.getString("outfitsType"));
-			cloth.setCustId(rs.getString("custId"));
+			cloth.setClothId(rs.getInt("cloth_id"));
+			cloth.setOutfitsType(rs.getString("outfits_type"));
+			cloth.setCustId(rs.getString("cust_id"));
 			cloth.setColor(rs.getString("color"));
 			cloth.setSeason(rs.getString("season"));			
 			
@@ -94,7 +94,7 @@ public class ClothRepository implements IClothRepository{
 	public void updateCloth(ClothesVO cloth) {
 		String sql = "update clothes "
 				+ "set outfits_type=?, color=?, season=? "
-				+ "where cust_id=";
+				+ "where cust_id=?";
 		jdbcTemplate.update(sql, cloth.getOutfitsType(),
 				cloth.getColor(),
 				cloth.getSeason(),
@@ -104,16 +104,17 @@ public class ClothRepository implements IClothRepository{
 	@Override
 	public void insertCloth(ClothesVO cloth, HttpSession session) {
 		String sql = "insert into clothes "
-				+ "(cloth_id, outfits_type, color, season, cust_id) "
-				+ "values (cloth_seq.nextval, ?, ?, ?, ?";
-		Object c = new CustomerVO();
-		c = session.getAttribute("customer");
-		System.out.println(c.toString());
+				+ "(cloth_id, outfits_type, cust_id,  color, season ) "
+				+ "values (cloth_seq.nextval, ?, 'aaa@naver.com', ?, ?)";
+//		Object c = new CustomerVO();
+//		c = session.getAttribute("customer");
+//		System.out.println(c.toString());
+		System.out.println("insertCloth는 왔는데! 데이터는 가져오냐?");
 		jdbcTemplate.update(sql, 
 				cloth.getOutfitsType(),
 				cloth.getColor(),
-				cloth.getSeason(),
-				cloth.getCustId());
+				cloth.getSeason()
+				);
 				
 		
 	}
