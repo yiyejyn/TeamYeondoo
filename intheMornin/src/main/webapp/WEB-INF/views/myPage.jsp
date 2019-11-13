@@ -130,7 +130,9 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                     <span class="mask"></span>
                 </div>
                 <div class="profile_txt">
-                    <span class="name" style="font-size: 13px;">이름 연동</span>
+                    <span class="name" style="font-size: 13px;">
+				
+					</span>
                 </div>
             </div>
             <div class="s_sc">

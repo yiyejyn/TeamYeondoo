@@ -62,9 +62,7 @@
 	
 	<context:component-scan base-package="com.inthemornin.ootd" />
 
-    <bean id="dataSource" 
-    class="com.zaxxer.hikari.HikariDataSource" 
-    destroy-method="close">
+    <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
         <constructor-arg>
             <bean class="com.zaxxer.hikari.HikariConfig">
             <constructor-arg>
