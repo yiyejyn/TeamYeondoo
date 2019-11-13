@@ -50,7 +50,7 @@ public class CustomerRepository implements ICustomerRepository{
 	public void insertCust(CustomerVO cust) {
 		String sql = "insert into customers (cust_id, cust_password, "
 				+ "cust_name, cust_address, cust_gender, cust_rank, cust_point) "
-				+ "values (?,?,?,?,?,?,?)";
+				+ "values (?,?,?,?,?,'Lv1',0)";
 		jdbcTemplate.update(sql, 
 				cust.getCust_id(), 
 				cust.getCust_password(), 

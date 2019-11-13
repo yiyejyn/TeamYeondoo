@@ -101,6 +101,13 @@
 			<version>1.9.13</version>
 		</dependency>
 
+		<!-- JAX B -->
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+		
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
