@@ -94,7 +94,10 @@ public class CustomerRepository implements ICustomerRepository{
 	@Override
 	public void login(CustomerVO vo, HttpSession session) {
 		System.out.println("===> 로그인 기능 처리");
-		session.setAttribute("cust_id", vo);
+		String sql = "select * from customers "
+				+ " where cust_id=? and cust_password=?";
+		CustomerVO temp = jdbcTemplate.queryForObject(sql, new CustomerMapper(), vo.getCustId());
+		session.setAttribute("customer", temp);
 	}
 	
 	@Override
