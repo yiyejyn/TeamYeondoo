@@ -97,11 +97,11 @@ public class CustomerController {
 	@RequestMapping(value="/custcount") // URL주소 뒤에 해당 사이트에 요청을 보내라
 	public String customerCount(
 		@RequestParam(value="deptid", required=false, defaultValue="0") 
-		int deptid, Model model) {
+		String custId, int deptid, Model model) {
 		if(deptid==0) {
 			model.addAttribute("custcount", customerService.getCount());
 		}else {
-			model.addAttribute("custcount", customerService.getCount(deptid));
+			model.addAttribute("custcount", customerService.getCount(custId));
 		}
 		return "/custcount";
 	}

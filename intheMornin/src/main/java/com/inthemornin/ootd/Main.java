@@ -18,8 +18,7 @@ public class Main {
 			
 			System.out.println("제발 뭐라도 되면 좋겠다...");
 			System.out.println(customerService.getCount());
-			System.out.println(customerService.getCount(10));
-			
+		
 		context.close();
 	}
 

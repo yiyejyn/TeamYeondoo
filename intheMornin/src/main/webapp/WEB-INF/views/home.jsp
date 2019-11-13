@@ -39,7 +39,7 @@
                             <a href="#">TODAY</a>
                         </li>
                         <li>
-                            <a href="mycloset.html">MY PAGE</a>
+                            <a href="<c:url value='myPage'/>">MY PAGE</a>
                         </li>
                         <li>
                             <a href="login.html"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>

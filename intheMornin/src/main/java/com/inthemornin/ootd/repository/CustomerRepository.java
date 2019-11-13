@@ -43,9 +43,9 @@ public class CustomerRepository implements ICustomerRepository{
 	}
 
 	@Override
-	public int getCount(int deptid) {
+	public int getCount(String custId) {
 		String sql = "select count(*) from customers where cust_id=?";
-		return jdbcTemplate.queryForObject(sql, Integer.class, deptid);
+		return jdbcTemplate.queryForObject(sql, Integer.class, custId);
 	}
 	
 	@Override
@@ -95,7 +95,7 @@ public class CustomerRepository implements ICustomerRepository{
 	public void login(CustomerVO vo, HttpSession session) {
 		System.out.println("===> 로그인 기능 처리");
 		String sql = "select * from customers "
-				+ " where cust_id=? and cust_password=?";
+				+ " where cust_id=?";
 		CustomerVO temp = jdbcTemplate.queryForObject(sql, new CustomerMapper(), vo.getCustId());
 		session.setAttribute("customer", temp);
 	}

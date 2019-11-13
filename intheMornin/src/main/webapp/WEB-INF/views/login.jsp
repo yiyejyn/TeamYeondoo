@@ -33,13 +33,13 @@
                 <div class="collapse navbar-collapse" id="nav_menu">
                     <ul class="nav navbar-nav navbar-right" >
                         <li>
-                            <a href="home.jsp">TODAY</a>
+                            <a href="#">TODAY</a>
                         </li>
                         <li>
-                            <a href="mycloset.jsp">MY PAGE</a>
+                            <a href="<c:url value='myPage'/>">MY PAGE</a>
                         </li>
                         <li>
-                            <a href="#"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
+                            <a href="<c:url value='login'/>"><span class="glyphicon glyphicon-log-in"></span> LOG-IN</a>
                         </li>
                     </ul>
                 </div>
@@ -59,7 +59,7 @@
             <input type="password" id="upw" class="form-control" placeholder="비밀번호" required><br>
             <button id="btn-Yes" class="btn btn-lg btn-default btn-block" type="submit">로 그 인</button>
             <hr>
-            <p class="izU2O" style="text-align: center;">계정이 없으신가요? <a href="/accounts/emailsignup/">가입하기</a></p>
+            <p class="izU2O" style="text-align: center;">계정이 없으신가요? <a href="<c:url value='join'/>">가입하기</a></p>
         </form>
         </div>
 		</div>

@@ -9,7 +9,7 @@ import com.inthemornin.ootd.model.CustomerVO;
 
 public interface ICustomerService {
 	int getCount();
-	int getCount(int deptid);
+	int getCount(String custId);
 	void insertCust(CustomerVO cust);
 	boolean loginCheck(CustomerVO vo, HttpSession session);
 	void logout(HttpSession session);

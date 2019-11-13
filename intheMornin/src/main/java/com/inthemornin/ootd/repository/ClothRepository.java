@@ -32,25 +32,21 @@ public class ClothRepository implements IClothRepository{
 			return cloth;
 		}			
 	}
-	
+	// count the number of all customer's clothes
 	@Override
 	public int getCount() {
 		String sql = "select count(*) from clothes";
 		return jdbcTemplate.queryForObject(sql, Integer.class);
 	}
-
-	@Override
-	public int getCount(int deptid) {
-		String sql = "select count(*) from clothes where cloth_id=?";
-		return jdbcTemplate.queryForObject(sql, Integer.class, deptid);
-	}
 	
+	// count  the number of one customer's clothes
 	@Override
-	public int getCustClothCount(int deptid) {
+	public int getCustClothCount(String custId) {
 		String sql = "select count(*) from clothes where cust_id=?";
-		return jdbcTemplate.queryForObject(sql,  Integer.class, deptid);
+		return jdbcTemplate.queryForObject(sql,  Integer.class, custId);
 	}
 	
+	// getting all customer's clothes lists
 	@Override
 	public List<ClothesVO> getClothList() {
 		String sql = "select * from clothes";	
@@ -68,9 +64,19 @@ public class ClothRepository implements IClothRepository{
 		});
 	}
 	
+	// getting one certain customer's clothes info
+	@Override
+	public ClothesVO getClothInfo(String custId) {
+		String sql = "select cloth_id, outfits_type, color, season "
+				+ "from clothes "
+				+ "where cust_id as custId=?";
+		return jdbcTemplate.queryForObject(sql,  new ClothMapper(), custId);
+	}
+	
 	@Override
 	public List<Map<String, Object>> getAllCloth() {
-		String sql = "select cloth_id as clothId, outfits_type as outfitsType, cust_id as custId, color, season from clothes";
+		String sql = "select cloth_id as clothId, outfits_type as outfitsType, cust_id as custId, color, season "
+				+ "from clothes";
 		return jdbcTemplate.queryForList(sql);
 	}
 	
@@ -82,4 +88,34 @@ public class ClothRepository implements IClothRepository{
 		return jdbcTemplate.queryForList(sql);
 	}
 
+	@Override
+	public void updateCloth(ClothesVO cloth) {
+		String sql = "update clothes "
+				+ "set outfits_type=?, color=?, season=? "
+				+ "where cust_id=";
+		jdbcTemplate.update(sql, cloth.getOutfitsType(),
+				cloth.getColor(),
+				cloth.getSeason(),
+				cloth.getCustId());
+	}
+	
+	@Override
+	public void insertCloth(ClothesVO cloth, CustomerVO cust) {
+		String sql = "insert into clothes "
+				+ "(cloth_id, outfits_type, cust_id, color, season) "
+				+ "values (cloth_seq.nextval, ?, ?, ?, ?) "
+				+ "where cust_id=?";
+		jdbcTemplate.update(sql, cloth.getCustId(),
+				cloth.getOutfitsType(),
+				cloth.getColor(),
+				cloth.getSeason(),
+				cust.getCustId());
+	}
+	
+	@Override
+	public void deleteCloth(int clothId, String custId) {
+		String sql = "delete from clothes where cloth_id as clothId=? and cust_id as custId=?";
+		jdbcTemplate.update(sql, clothId, custId);
+	}
+	
 }
