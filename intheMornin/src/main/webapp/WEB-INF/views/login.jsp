@@ -29,7 +29,7 @@
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="home.jsp">
+                    <a class="navbar-brand" href="">
                         #OOTD
                     </a>
                 </div>
@@ -60,7 +60,7 @@
         <input type="text" id="uid" class="form-control" placeholder="Your ID" required autofocus><BR>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="upw" class="form-control" placeholder="Password" required><br>
-        <a href="join.jsp" class="btn btn-lg btn-primary btn-block">회원가입</a><br>
+        <a href="<c:url value='join'/>"> <class="btn btn-lg btn-primary btn-block">회원가입</a><br>
         <button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit">로 그 인</button>
       </form>
       </div>
