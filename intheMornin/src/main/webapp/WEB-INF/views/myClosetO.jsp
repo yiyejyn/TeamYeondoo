@@ -160,7 +160,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                         <ul style="margin-top: 10%;">
                             <li class="goods_pay_item ">
                                 <a href="/orderStatus/2019103137492141" class="goods_thumb">
-                                    <img src="./resources/img/o_1.jpg" width="170" height="237">				
+                                    <img src="./resources/img/o_1.png" width="170" height="237">				
                                 </a>
                             </li>
                         </ul>
@@ -169,7 +169,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                         <ul style="margin-top: 10%;">
                             <li class="goods_pay_item ">
                                 <a href="/orderStatus/2019103137492141" class="goods_thumb">
-                                    <img src="./resources/img/o_2.jpg" width="170" height="237">				
+                                    <img src="./resources/img/o_2.png" width="170" height="237">				
                                 </a>
                             </li>
                         </ul>
@@ -178,7 +178,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
                         <ul style="margin-top: 10%;">
                             <li class="goods_pay_item ">
                                 <a href="/orderStatus/2019103137492141" class="goods_thumb">
-                                    <img src="./resources/img/o_3.jpg" width="170" height="237">				
+                                    <img src="./resources/img/o_3.png" width="170" height="237">				
                                 </a>
                             </li>
                         </ul>
