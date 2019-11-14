@@ -613,7 +613,7 @@
         <div class="col-lg-10">
             <select class="form-control" id="gender" name="custGender">
                 <option value="M">남자</option>
-                <option value="F">여</option>
+                <option value="F">여자</option>
             </select>
         </div>
     </div>

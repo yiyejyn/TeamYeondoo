@@ -131,13 +131,16 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
             <div class="s_sc">
                 <dl class="my_npoint" style="text-align: center;">
                     <dt style="font-size: 15px;">성별</dt>
-                    <dd style="font-size: 13px; margin: 10%">
-                    	<a href="<c:url value='login/myPage/name'/>"></a>
-                    </dd>
+                    <dd style="font-size: 13px; margin: 10%">성별 연동</dd>
                 </dl>
                 <dl class="my_npoint" style="text-align: center;">
                     <dt style="font-size: 15px;">포인트</dt>
                     <dd style="font-size: 13px; margin-top: 10%;">포인트 연동 원</dd>
+                </dl>
+                <dl class="my_npoint" style="text-align: center; margin-top: 10%">
+                    <dt style="font-size: 15px;">회원 정보</dt>
+                    <dd style="font-size: 13px; margin-top: 10%; margin-bottom: 3%;"><a href="<c:url value='#'/>">정보 수정</a></dd>
+                    <dd style="font-size: 13px;"><a href="<c:url value="#"/>">회원 탈퇴</a></dd>
                 </dl>
             </div>
         </div>
@@ -210,10 +213,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 		        </ul>
 			</div>
 		</form>
-		</div>
-	</div>
-</div>
-<footer>
+		<footer>
         <hr>
         <p class="text-center">
             <small><strong>YeonDoo#OOTD</strong></small><br>
@@ -221,5 +221,9 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
             <small>Copyrightⓒ Team YeonDoo All rights reserved.</small>
         </p>
     </footer>
+		</div>
+	</div>
+</div>
+
 </body>
 </html>
