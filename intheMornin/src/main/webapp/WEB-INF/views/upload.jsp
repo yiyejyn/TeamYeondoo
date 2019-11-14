@@ -223,6 +223,14 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 				</div>
 			</div>
 		</form>
+		<footer>
+                <hr>
+                <p class="text-center">
+                    <small><strong>YeonDoo#OOTD</strong></small><br>
+                    <small>대표 : 연두 ㆍ 주소 :  서울 어딘가 ㆍ 사업자등록번호:123-12-12345 ㆍ 전화 : 064-123-1234</small><br>
+                    <small>Copyrightⓒ Team YeonDoo All rights reserved.</small>
+                </p>
+            </footer>
 	</div>
 </body>
 </html>

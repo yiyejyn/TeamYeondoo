@@ -160,7 +160,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        <ul style="margin-top: 10%;">
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-                                <img src="댕댕이.jpg" width="170" height="237">			
+                                <img src="./resources/img/o_1.jpg" width="170" height="237">			
                             </a><br>
                             <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
@@ -170,7 +170,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        <ul style="margin-top: 10%;">
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-			                    <img src="댕댕이.jpg" width="170" height="237">				
+			                    <img src="./resources/img/o_2.jpg" width="170" height="237">				
 			                </a><br>
                             <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
@@ -180,7 +180,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        <ul style="margin-top: 10%;">
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-			                    <img src="댕댕이.jpg" width="170" height="237">				
+			                    <img src="./resources/img/o_3.jpg" width="170" height="237">				
 			                </a><br>
                             <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
@@ -190,7 +190,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 		            <ul style="margin-top: 10%;">
 		                <li class="goods_pay_item ">
 		                    <a href="/orderStatus/2019103137492141" class="goods_thumb">
-		                        <img src="댕댕이.jpg" width="170" height="237">				
+		                        <img src="./resources/img/outer_1.png" width="170" height="237">				
 		                    </a><br>
                             <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 		                </li>
@@ -200,7 +200,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        <ul style="margin-top: 10%;">
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-			                    <img src="댕댕이.jpg" width="170" height="237">				
+			                    <img src="./resources/img/outer_2.png" width="170" height="237">				
 			                </a><br>
                             <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
@@ -210,7 +210,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        <ul style="margin-top: 10%;">
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-			                    <img src="댕댕이.jpg" width="170" height="237">				
+			                    <img src="./resources/img/outer_3.png" width="170" height="237">				
 			                </a><br>
                             <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
@@ -219,6 +219,14 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			</div>
 			<button style="float: right;" type="button" class="btn btn-default" onclick="location.href='<c:url value='upload'/>'">추가</button>
 		</div>
+		<footer>
+				<hr>
+				<p class="text-center">
+					<small><strong>YeonDoo#OOTD</strong></small><br>
+					<small>대표 : 연두 ㆍ 주소 :  서울 어딘가 ㆍ 사업자등록번호:123-12-12345 ㆍ 전화 : 064-123-1234</small><br>
+					<small>Copyrightⓒ Team YeonDoo All rights reserved.</small>
+				</p>
+			</footer>
 	</div>
 </body>
 </html>
