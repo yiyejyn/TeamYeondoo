@@ -160,7 +160,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        <ul style="margin-top: 10%;">
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-                                <img src="./resources/img/t_1.jpg" width="170" height="237">			
+                                <img src="./resources/img/t_1.png" width="170" height="237">			
                             </a><br>
                             <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
@@ -170,7 +170,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        <ul style="margin-top: 10%;">
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-			                    <img src="./resources/img/t_2.jpg" width="170" height="237">				
+			                    <img src="./resources/img/t_2.png" width="170" height="237">				
 			                </a><br>
                             <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
@@ -180,7 +180,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        <ul style="margin-top: 10%;">
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-			                    <img src="./resources/img/t_3.jpg" width="170" height="237">				
+			                    <img src="./resources/img/t_3.png" width="170" height="237">				
 			                </a><br>
                             <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
@@ -190,7 +190,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 		            <ul style="margin-top: 10%;">
 		                <li class="goods_pay_item ">
 		                    <a href="/orderStatus/2019103137492141" class="goods_thumb">
-		                        <img src="./resources/img/top_1.png" width="170" height="237">				
+		                        <img src="./resources/img/top_1.PNG" width="170" height="237">				
 		                    </a><br>
                             <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 		                </li>
@@ -200,7 +200,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        <ul style="margin-top: 10%;">
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-			                    <img src="./resources/img/top_2png" width="170" height="237">				
+			                    <img src="./resources/img/top_2.PNG" width="170" height="237">				
 			                </a><br>
                             <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
@@ -210,7 +210,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        <ul style="margin-top: 10%;">
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-			                    <img src="./resources/img/top_3.png" width="170" height="237">				
+			                    <img src="./resources/img/top_3.PNG" width="170" height="237">				
 			                </a><br>
                             <button style="margin-top: 10%;"type="reset" value="reset" class="btn btn-default">삭제</button>
 			            </li>
@@ -218,7 +218,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			    </div>
 			</div>
 			<button style="float: right;" type="button" class="btn btn-default" onclick="location.href='<c:url value='upload'/>'">추가</button>
-		</div>
+		</div><br><br>
 		<footer>
 				<hr>
 				<p class="text-center">

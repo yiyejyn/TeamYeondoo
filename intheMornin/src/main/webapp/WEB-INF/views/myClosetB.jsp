@@ -153,7 +153,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			    <div style="display: inline-block; margin-left: 10%;">
 			        <a href="<c:url value='myClosetB'/>" style="font-size: 20px; color: black; font-weight: 500;">BOTTOM</a>
                 </div>
-                <button type="button" class="btn btn-defualt" style="float: right;" onclick="location.href='eidtB'">EDIT</button>
+                <button type="button" class="btn btn-defualt" style="float: right;" onclick="location.href='editB'">EDIT</button>
 			</div>
 			<div>
 			    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
@@ -187,7 +187,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 		            <ul style="margin-top: 10%;">
 		                <li class="goods_pay_item ">
 		                    <a href="/orderStatus/2019103137492141" class="goods_thumb">
-		                        <img src="./resources/img/bottom_1.jpg" width="170" height="237">				
+		                        <img src="./resources/img/b_4.png" width="170" height="237">				
 		                    </a>
 		                </li>
 		            </ul>
@@ -196,7 +196,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        <ul style="margin-top: 10%;">
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-			                    <img src="./resources/img/bottom_2.jpg" width="170" height="237">				
+			                    <img src="./resources/img/b_5.png" width="170" height="237">				
 			                </a>
 			            </li>
 			        </ul>
@@ -205,7 +205,7 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 			        <ul style="margin-top: 10%;">
 			            <li class="goods_pay_item ">
 			                <a href="/orderStatus/2019103137492141" class="goods_thumb">
-			                    <img src="./resources/img/bottom_3.jpg" width="170" height="237">				
+			                    <img src="./resources/img/b_6.png" width="170" height="237">				
 			                </a>
 			            </li>
 			        </ul>
