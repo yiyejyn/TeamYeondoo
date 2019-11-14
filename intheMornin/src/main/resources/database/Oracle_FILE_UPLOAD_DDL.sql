@@ -1,4 +1,4 @@
-﻿DROP TABLE CUSTOMERS;
+癤풡ROP TABLE CUSTOMERS;
 DROP TABLE MANAGERS;
 DROP TABLE CLOTHES;
 DROP TABLE OUTFITS;
@@ -25,8 +25,7 @@ CREATE TABLE CLOTHES (
         OUTFITS_TYPE VARCHAR(20) NOT NULL,
         CUST_ID VARCHAR(30) NOT NULL,
         COLOR VARCHAR(20) NOT NULL,
-        SEASON VARCHAR(20) NOT NULL,
-        IMG_URL VARCHAR(100) NOT NULL
+        SEASON VARCHAR(20) NOT NULL
         
         CONSTRAINT CLOTHES_FK FOREIGN KEY (CUST_ID) REFERENCES CUSTOMERS(CUST_ID)
 );
@@ -44,22 +43,22 @@ CREATE TABLE OUTFITS (
 CREATE SEQUENCE CLOTH_SEQ START WITH 1 INCREMENT BY 1 MAXVALUE 100000; 
 
 INSERT INTO CUSTOMERS (CUST_ID, CUST_PASSWORD, CUST_NAME, CUST_ADDRESS, CUST_GENDER, CUST_RANK, CUST_POINT)
-VALUES ('aaa@naver.com', '1q2w3e4r', '홍길동', '서울시', '남자', 'Lv1', 1000);
+VALUES ('aaa@naver.com', '1q2w3e4r', '�솉湲몃룞', '�꽌�슱�떆', '�궓�옄', 'Lv1', 1000);
 INSERT INTO CUSTOMERS (CUST_ID, CUST_PASSWORD, CUST_NAME, CUST_ADDRESS, CUST_GENDER, CUST_RANK, CUST_POINT)
-VALUES ('abc@naver.com', '1q2w3e4r', '손예진', '서울시', '여자', 'Lv2', 5000);
+VALUES ('abc@naver.com', '1q2w3e4r', '�넀�삁吏�', '�꽌�슱�떆', '�뿬�옄', 'Lv2', 5000);
 INSERT INTO CUSTOMERS (CUST_ID, CUST_PASSWORD, CUST_NAME, CUST_ADDRESS, CUST_GENDER, CUST_RANK, CUST_POINT)
-VALUES ('bbb@naver.com', '1q2w3e4r', '이민기', '서울시', '남자', 'Lv4', 8000);
+VALUES ('bbb@naver.com', '1q2w3e4r', '�씠誘쇨린', '�꽌�슱�떆', '�궓�옄', 'Lv4', 8000);
 INSERT INTO CUSTOMERS (CUST_ID, CUST_PASSWORD, CUST_NAME, CUST_ADDRESS, CUST_GENDER, CUST_RANK, CUST_POINT)
-VALUES ('ccc@naver.com', '1q2w3e4r', '배주현', '서울시', '여자', 'Lv5', 20000);
+VALUES ('ccc@naver.com', '1q2w3e4r', '諛곗＜�쁽', '�꽌�슱�떆', '�뿬�옄', 'Lv5', 20000);
 INSERT INTO CUSTOMERS (CUST_ID, CUST_PASSWORD, CUST_NAME, CUST_ADDRESS, CUST_GENDER, CUST_RANK, CUST_POINT)
-VALUES ('ddd@naver.com', '1q2w3e4r', '강동원', '서울시', '남자', 'Lv3', 8000);
+VALUES ('ddd@naver.com', '1q2w3e4r', '媛뺣룞�썝', '�꽌�슱�떆', '�궓�옄', 'Lv3', 8000);
 
 INSERT INTO MANAGERS (MANA_ID, MANA_PASSWORD, MANA_NAME, MANA_POSITION)
-VALUES ('yiyejyn@gmail.com', '1p2p3p4p', '이예진', '사장');
+VALUES ('yiyejyn@gmail.com', '1p2p3p4p', '�씠�삁吏�', '�궗�옣');
 INSERT INTO MANAGERS (MANA_ID, MANA_PASSWORD, MANA_NAME, MANA_POSITION)
-VALUES ('Garrincha95@gmail.com', '1p2p3p4p', '이찬호', '직원');
+VALUES ('Garrincha95@gmail.com', '1p2p3p4p', '�씠李ы샇', '吏곸썝');
 INSERT INTO MANAGERS (MANA_ID, MANA_PASSWORD, MANA_NAME, MANA_POSITION)
-VALUES ('veroroot@gmail.com', '1p2p3p4p', '장진원', '직원');
+VALUES ('veroroot@gmail.com', '1p2p3p4p', '�옣吏꾩썝', '吏곸썝');
 
 
 INSERT INTO CLOTHES (CLOTH_ID, OUTFITS_TYPE, CUST_ID, COLOR, SEASON)
