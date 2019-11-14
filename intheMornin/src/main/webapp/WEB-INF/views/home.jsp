@@ -15,10 +15,6 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	
-	<script>
-		
-	</script>
-	
 </head>
 <body>
 	<div>
@@ -66,9 +62,9 @@
 		<div class="carousel-inner" style="height: 100%;">
 			<!--슬라이드1-->
 			<div class="item active"> 
-				<img src="pic/outer_1.PNG" alt="First slide" style="display: inline-block; width: 33%;">
-				<img src="pic/top_1.PNG" alt="First slide" style="display: inline-block; width: 33%;">
-				<img src="pic/bottom_1.png" alt="First slide" style="display: inline-block; width: 33%;">
+				<img src="./resources/img/outer_1.PNG" alt="First slide" style="display: inline-block; width: 33%;">
+				<img src="./resources/img/top_1.PNG" alt="First slide" style="display: inline-block; width: 33%;">
+				<img src="./resources/img/bottom_1.PNG" alt="First slide" style="display: inline-block; width: 33%;">
 				<div class="container">
 					<div class="carousel-caption"></div>
 				</div>
@@ -77,9 +73,9 @@
 	
 			<!--슬라이드2-->
 			<div class="item"> 
-				<img src="pic/outer_2.PNG" alt="First slide" style="display: inline-block; width: 33%;">
-				<img src="pic/top_2.png" alt="First slide" style="display: inline-block; width: 33%;">
-				<img src="pic/bottom_2.png" alt="First slide" style="display: inline-block; width: 33%;">
+				<img src="./resources/img/outer_2.PNG" alt="First slide" style="display: inline-block; width: 33%;">
+				<img src="./resources/img/top_2.PNG" alt="First slide" style="display: inline-block; width: 33%;">
+				<img src="./resources/img/bottom_2.PNG" alt="First slide" style="display: inline-block; width: 33%;">
 				<div class="container">
 					<div class="carousel-caption">
 					</div>
@@ -89,9 +85,9 @@
 			
 			<!--슬라이드3-->
 			<div class="item"> 
-				<img src="pic/outer_3.PNG" alt="First slide" style="display: inline-block; width: 33%;">
-				<img src="pic/top_3.PNG" alt="First slide" style="display: inline-block; width: 33%;">
-				<img src="pic/bottom_3.PNG" alt="First slide" style="display: inline-block; width: 33%;">
+				<img src="./resources/img/outer_3.PNG" alt="First slide" style="display: inline-block; width: 33%;">
+				<img src="./resources/img/top_3.PNG" alt="First slide" style="display: inline-block; width: 33%;">
+				<img src="./resources/img/bottom_3.PNG" alt="First slide" style="display: inline-block; width: 33%;">
 				<div class="container">
 					<div class="carousel-caption">
 					</div>
@@ -109,16 +105,16 @@
 			#Recommend ootd
 		</div>
 		<div style="margin-bottom: 8%;">
-			<img src="pic/reootd_1.PNG" style="display: inline-block; width: 20%; margin-right: 5%;">
-			<img src="pic/reootd_2.jpg" style="display: inline-block; width: 20%; margin-right: 5%;">
-			<img src="pic/reootd_3.jpg" style="display: inline-block; width: 20%; margin-right: 5%;">
-			<img src="pic/reootd_4.jpg" style="display: inline-block; width: 20%;">
+			<img src="./resources/img/reootd_1.jpg" style="display: inline-block; width: 20%; margin-right: 5%;">
+			<img src="./resources/img/reootd_2.jpg" style="display: inline-block; width: 20%; margin-right: 5%;">
+			<img src="./resources/img/reootd_3.jpg" style="display: inline-block; width: 20%; margin-right: 5%;">
+			<img src="./resources/img/reootd_4.jpg" style="display: inline-block; width: 20%;">
 		</div>
 		<div style="margin-bottom: 8%;">
-			<img src="pic/reootd_5.jpg" style="display: inline-block; width: 20%; margin-right: 5%;">
-			<img src="pic/reootd_6.jpg" style="display: inline-block; width: 20%; margin-right: 5%;">
-			<img src="pic/reootd_7.jpg" style="display: inline-block; width: 20%; margin-right: 5%;">
-			<img src="pic/reootd_8.jpg" style="display: inline-block; width: 20%;">
+			<img src="./resources/img/reootd_5.jpg" style="display: inline-block; width: 20%; margin-right: 5%;">
+			<img src="./resources/img/reootd_6.jpg" style="display: inline-block; width: 20%; margin-right: 5%;">
+			<img src="./resources/img/reootd_7.jpg" style="display: inline-block; width: 20%; margin-right: 5%;">
+			<img src="./resources/img/reootd_8.jpg" style="display: inline-block; width: 20%;">
 		</div>
 	</div>
 		<footer>

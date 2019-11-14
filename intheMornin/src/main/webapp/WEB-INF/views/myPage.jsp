@@ -83,13 +83,6 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 <script type="text/javascript" language="JavaScript" src="https://ssl.pstatic.net/static.checkout/layout/201911010009/js/customer/layout.lnb.js"></script>
 <script type="text/javascript" language="JavaScript" src="https://ssl.pstatic.net/static.checkout/layout/201911010009/js/customer/layout.snb.js"></script>
 <script type="text/javascript" language="JavaScript" src="https://ssl.pstatic.net/static.checkout/layout/201911010009/js/customer/checkout.nclktag.js"></script>
-<script type="text/javascript">
-
-	var MyDiv1 = document.getElementById('DIV1');
-	var MyDiv2 = document.getElementById('DIV2');
-	MyDiv2.innerHTML = MyDiv1.innerHTML;
- 
- </script>
 </head>
 <body>
 	<div>
@@ -165,8 +158,8 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 		    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
 		        <ul style="margin-top: 10%;">
 		            <li class="goods_pay_item ">
-		                <a href="업로드 연동" class="goods_thumb">
-		                    <img src="댕댕이.jpg" width="170" height="237">				
+		                <a class="goods_thumb">
+		                    <img src="./resources/img/reootd_1.jpg" width="170" height="237">				
 		                </a>
 		            </li>
 		        </ul>
@@ -174,8 +167,8 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 		    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
 		        <ul style="margin-top: 10%;">
 		            <li class="goods_pay_item ">
-		                <a href="업로드 연동" class="goods_thumb">
-		                    <img src="댕댕이.jpg" width="170" height="237">				
+		                <a class="goods_thumb">
+		                    <img src="./resources/img/reootd_2.jpg" width="170" height="237">				
 		                </a>
 		            </li>
 		        </ul>
@@ -183,8 +176,8 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 		    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
 		        <ul style="margin-top: 10%;">
 		            <li class="goods_pay_item ">
-		                <a href="업로드 연동" class="goods_thumb">
-		                    <img src="댕댕이.jpg" width="170" height="237">				
+		                <a class="goods_thumb">
+		                    <img src="./resources/img/reootd_3.jpg" width="170" height="237">				
 		                </a>
 		            </li>
 		        </ul>
@@ -192,8 +185,8 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 		    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
 		        <ul style="margin-top: 10%;">
 		            <li class="goods_pay_item ">
-		                <a href="업로드 연동" class="goods_thumb">
-		                    <img src="댕댕이.jpg" width="170" height="237">				
+		                <a class="goods_thumb">
+		                    <img src="./resources/img/reootd_4.jpg" width="170" height="237">				
 		                </a>
 		            </li>
 		        </ul>
@@ -201,8 +194,8 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 		    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
 		        <ul style="margin-top: 10%;">
 		            <li class="goods_pay_item ">
-		                <a href="업로드 연동" class="goods_thumb">
-		                    <img src="댕댕이.jpg" width="170" height="237">				
+		                <a class="goods_thumb">
+		                    <img src="./resources/img/reootd_5.jpg" width="170" height="237">				
 		                </a>
 		            </li>
 		        </ul>
@@ -210,8 +203,8 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 		    <div class="tit_month" style="width: 33%; height: 50%; display: inline-block;">
 		        <ul style="margin-top: 10%;">
 		            <li class="goods_pay_item ">
-		                <a href="업로드 연동" class="goods_thumb">
-		                    <img src="댕댕이.jpg" width="170" height="237">				
+		                <a class="goods_thumb">
+		                    <img src="./resources/img/reootd_6.jpg" width="170" height="237">				
 		                </a>
 		            </li>
 		        </ul>
@@ -220,5 +213,13 @@ nmp.registerModule(nmp.front.order.timeline.home.floatingBanner, {
 		</div>
 	</div>
 </div>
+<footer>
+        <hr>
+        <p class="text-center">
+            <small><strong>YeonDoo#OOTD</strong></small><br>
+            <small>대표 : 연두 ㆍ 주소 :  서울 어딘가 ㆍ 사업자등록번호:123-12-12345 ㆍ 전화 : 064-123-1234</small><br>
+            <small>Copyrightⓒ Team YeonDoo All rights reserved.</small>
+        </p>
+    </footer>
 </body>
 </html>
